@@ -2,11 +2,227 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="http://allfont.ru/allfont.css?fonts=roboto-medium" type="text/css" />
+	<link rel="stylesheet" href="http://allfont.ru/allfont.css?fonts=roboto-light" type="text/css" />
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+	<!--Хедер страницы -->
+		<header class="main-header">
+			<div class="container clearfix">
+				
+				<div class="logo">
+					<a href="#"><img src="img/-index/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
+				</div>
+					
+				<nav class="main-navigation">
+					<ul>
+						<li><a href="index.html">Студия</a></li>
+						<li><a href="#">Клиенты</a></li>
+						<li><a href="store.html">Магазин</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
+					</ul>
+				</nav>
+			</div> 
+			
+			<div class="container clearfix">	
+				<!-- Слайдер -->
+				<div class="slider">
+					<input type="radio" id="btn-1" name="toggle" checked>
+					<input type="radio" id="btn-2" name="toggle">
+					<input type="radio" id="btn-3" name="toggle">
+					<div class="slider-controls">
+						<label for="btn-1"></label>
+						<label for="btn-2"></label>
+						<label for="btn-3"></label>
+					</div>
+					<div class="slides">
+						<div class="slide">
+							<div class="slide-text">
+								<div class="slide-title">Долго, дорого, скрупулезно</div>
+									<p>Математически выверенный дизайн<br>
+									для вашего сайта или мобильного приложения.</p>
+									<a class="btn" href="#">Узнать больше</a>
+								</div>
+							</div>
+						<div class="slide">
+							<div class="slide-text">
+								<div class="slide-title">Дорого, скрупулезно</div>
+									<p>Математически выверенный дизайн<br>
+									для вашего сайта или мобильного приложения.</p>
+									<a class="btn" href="#">Узнать больше</a>
+								</div>
+							</div>
+						<div class="slide">
+							<div class="slide-text">
+								<div class="slide-title">Скрупулезно</div>
+								<p>Математически выверенный дизайн<br>
+								для вашего сайта или мобильного приложения.</p>
+								<a class="btn" href="#">Узнать больше</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!--Основная часть страницы -->
+		<div class="main-container clearfix">
+		<main class="container">
+						
+			<!--Слоган из 3-х колонок -->
+			<section class="slogan clearfix">
+				<div class="slogan-item">
+					<img src="img/-index/slogan_item.jpg" width="240" height="124" alt="Slogan-Item1">
+					<div class="slogan-title">Веб-сайты</div>
+					<p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
+					<div class="btn">Заказать <!-- Либо кнопка button... Надо подумать! -->
+					</div>
+				</div>
+				
+				<div class="slogan-item">
+					<img src="img/-index/slogan_item_2.jpg" width="240" height="124" alt="Slogan-Item2">
+					<div class="slogan-title">Приложения</div>
+					<p>Покорите топ-10 приложений в AppStore и GooglePlay</p>
+					<div class="btn">Заказать <!-- Либо кнопка button... Надо подумать! -->
+					</div>
+				</div>
+				
+				<div class="slogan-item">
+					<img src="img/-index/slogan_item_3.jpg" width="240" height="124" alt="Slogan-Item3">
+					<div class="slogan-title">Презентации</div>
+					<p>Вы даже не подозреваете, насколько вы изумительны!</p>
+					<div class="btn">Заказать <!-- Либо кнопка button... Надо подумать! -->
+					</div>
+				</div>
+			</section>
+			
+			<!-- Основной контент страницы -->
+			<div class="content">
+				<div class="clearfix">
+				<!-- Левая колонка -->
+				<div class="content-column-left">
+					<h1>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h1>
+					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
+					<ul class="list">
+						<li class="subtitle">Выполняем заказы на разработку:</li>  <!-- Либо использовать тег заголовка LH -->
+						<li>Веб-сайтов любой сложности</li>
+						<li>Мобильных приложений для iOS и Android</li>
+						<li>Слайдшоу и видео для корпоративных презентаций</li>
+					</ul>
+				</div>
+				
+				<!-- Правая колонка -->
+				<div class="content-column-right">
+					<div class="picture-logo">		<!-- Снова логотип-->
+						<img src="img/-index/logo.png" width="139" height="56" alt="Студия Nerd's">
+					</div>
+					
+					<div class="caption-logo">		<!-- Заголовок -->
+						<h2>since 2004</h2>
+					</div>
+					
+					<ul class="list">
+						<li class="subtitle">Как мы работаем:</li>  <!-- Либо использовать тег заголовка LH -->
+						<li>С самоотдачей 146%</li>
+						<li>Соблюдая сроки на 100%</li>
+						<li>По предоплате 50%</li>
+					</ul>
+				</div>
+				</div>
+				
+				<!-- Нижний блок с логотипами партнеров -->
+				<div class="partners clearfix">
+					<div class="partner-item">
+						<img src="img/-index/partner-item-1.png" width="198" height="37" alt="Picture-Item1">
+					</div>
+					
+					<div class="partner-item">
+						<img src="img/-index/partner-item-2.png" width="199" height="68" alt="Picture-Item2">
+					</div>
+					
+					<div class="partner-item">
+						<img src="img/-index/partner-item-3.png" width="209" height="86" alt="Picture-Item3">
+					</div>
+				</div>	
+			</div>
+		</main>
+		
+		
+				<!-- Карта с контактами -->
+				<div class="map clearfix">
+					<div class="container clearfix">
+						<div class="map-content">		<!-- Собственно карта (должна быть интерактивная!!!) Это пока просто картинка -->
+							<!-- <img src="img/-index/map.jpg" width="1199" height="416" alt="Карта">		 <!-- ... -->
+							
+							<div class="marker">
+								<img src="img/-index/marker_map.png" width="182" height="190" alt="Маркер">
+							</div>
+							
+							<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
+								<div class="head">NЁRDS DESIGN STUDIO</div>
+									<p>191186, Санкт-Петербург,<br>
+									ул. Б.Конюшенная, д. 19/8<br>
+									<br>
+									тел. +7(812) 275-75-75</p>
+												
+									<a class="btn" href="#">Напишите нам</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<!--Футер страницы -->
+		<footer class="main-footer">
+			<div class="container clearfix">
+				<div class="footer-social">
+					<a class="social-btn" href="#"><i class="icon-vk"></i></a>
+					<a class="social-btn" href="#"><i class="icon-facebook"></i></a>
+					<a class="social-btn" href="#"><i class="icon-instagramm"></i></a>
+				</div>
+				
+				<div class="footer-text">
+					<h2>Давайте дружить, это выгодно!</h2>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Всплывающее модальное окно Напишите нам-->
+		<div class="modal-window">
+			<!-- Кнопка Закрыть -->
+			<div class="modal-window-close">
+				закрыть
+			</div>
+			
+			<!-- Форма обратной связи -->
+			<form class="login-form" action="/echo" method="post">
+				<div class="left-part">
+					<label for="name">Ваше имя:</label><br>
+					<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
+				</div>
+				
+				<div class="right-part">
+					<label for="e-mail">Ваш е-mail:</label><br>
+					<input type="email" name="e-mail" id="e-mail" placeholder="Для отправки ответа" required><br>
+				</div>
+				
+				<label for="letter">Текст письма:</label><br>
+				<textarea rows="4" cols="56" name="letter" id="letter" placeholder="В свободной форме" required>
+				</textarea><br>
+				<button type="submit" class="btn">Отправить</button>
+			</form>
+		</div>
+		
+		<!-- Скрипт формы обратной связи -->
+		<script>
+			
+		</script>
+		
   </body>
 </html>

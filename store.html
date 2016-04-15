@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="http://allfont.ru/allfont.css?fonts=roboto-medium" type="text/css" />
+	<link rel="stylesheet" href="http://allfont.ru/allfont.css?fonts=roboto-light" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-thin" rel="stylesheet" type="text/css" />
+    <title>Магазин Nerd's</title>
+  </head>
+	<body class="catalog">
+		<!--Хедер страницы -->
+		<header class="main-header">
+			<div class="container clearfix">
+				
+				<div class="logo">
+					<a href="#"><img src="img/-index/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
+				</div>
+					
+				<nav class="main-navigation">
+					<ul>
+						<li><a href="index.html">Студия</a></li>
+						<li><a href="#">Клиенты</a></li>
+						<li class="active"><a href="store.html">Магазин</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
+					</ul>
+				</nav>
+			</div> <!-- -->
+				<!--	
+				<div class="user-block">
+					<a class="login" href="#">Корзина</a>  <!-- По клику открывается модальное окно с формой входа! --
+				</div>
+				-->
+			<div class="container clearfix">	
+				<!-- Приветствие магазина -->
+				<div class="welcome">
+					Добро пожаловать в магазин готовых макетов
+				</div>
+			</div>
+		</header>
+		
+		<!--Основная часть страницы -->
+		<div class="main-container clearfix">
+		<main class="container">
+			<!-- Форма в левой части окна -->
+			<div class="left-part-form">
+				<form action="/echo" method="post">        <!--Вставь полный или относительный путь к серверному файлу (URL) -->
+					<!-- Блок Стоимость(ползунок) -->
+					<h2>Стоимость:</h2>
+					<div class="range-filter">
+						<div class="range-controls">
+							<div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
+							<div class="toggle min-toggle"></div>
+							<div class="toggle max-toggle"></div>
+						</div>
+						<div class="price-controls">
+							от <input class="min-price" type="text" value="5 000">
+							до <input class="max-price" type="text" value="15 000">
+						</div>
+					</div>
+					
+					<!-- Блок Сетка (радиобаттоны) -->
+					<h2>Сетка:</h2>
+					<input type="radio" name="radiobutton" id="adaptive" checked>
+					<label for="adaptive">Адаптивная</label><br>
+					<input type="radio" name="radiobutton" id="fixed">
+					<label for="fixed">Фиксированная</label><br>
+					<input type="radio" name="radiobutton" id="stretch">
+					<label for="stretch">Резиновая</label><br>
+					
+					<h2>Особенности:</h2>
+					<input type="checkbox" disabled id="check01" name="checkbox" value="" checked>
+					<label for="check01">Слайдер</label><br>
+					<input type="checkbox" id="check02" name="checkbox" value="">
+					<label for="check02">Блок преимуществ</label><br>
+					<input type="checkbox" id="check03" name="checkbox" value="" checked>
+					<label for="check03">Новости</label><br>
+					<input type="checkbox" id="check04" name="checkbox" value="">
+					<label for="check04">Галерея</label><br>
+					<input type="checkbox" id="check05" name="checkbox" value="">
+					<label for="check05">Корзина</label><br>
+					
+					<button type="submit" class="btn">Показать</button>
+				</form>
+			</div>
+			
+			<!-- Основная часть -->
+			<div class="right-part-items">
+				<!-- Блок сортировки -->
+				<div class="sorting clearfix">
+					<div class="sorter">
+						<ul class="sort-list">
+							<li>
+								<h3 class="sort-title">Сортировать:</h3>
+							</li>
+							<li class="active">
+								<a href="#">По цене</a>
+							</li>
+							<li>
+								<a href="#">По типу</a>
+							</li>
+							<li>
+								<a href="#">По функционалу</a>
+							</li>
+						</ul>
+					</div>
+						
+					<div class="sort-up-down">
+						<a class="active" href="#"><i class="icon-down-dir"></i></a>
+						<a href="#"><i class="icon-up-dir"></i></a>
+					</div>
+				</div>
+				
+				<!-- Собственно макеты -->
+				<div class="layouts-group clearfix">
+				
+					<section class="layout-item">			<!-- Один из макетов -->
+						<div class="browser">			<!-- Кружочки -->
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						
+						<div class="layout-buy">		<!-- Всплывающая заставка -->
+							<h2 class="layout-buy-title">Sunset</h2>
+							<p>Интернет-магазин с личным кабинетом</p>		<!-- Эти две строки почему-то разнятся в стайлгайде и каталоге (я взяла из каталога)... -->
+							<a class="btn" href="#">10 000 р.</a>
+						</div>
+						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+							<img src="img/-store/layout_1.jpg" width="240" height="240" alt="Макет1">
+						</a>
+					</section>
+					
+					<section class="layout-item">			<!-- Один из макетов -->
+						<div class="browser">			<!-- Кружочки -->
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						
+						<div class="layout-buy">		<!-- Всплывающая заставка -->
+							<h2 class="layout-buy-title">Sunset</h2>
+							<p>Интернет-магазин с личным кабинетом</p>
+							<a class="btn" href="#">10 000 р.</a>
+						</div>
+						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+							<img src="img/-store/layout_2.jpg" width="240" height="240" alt="Макет2">
+						</a>
+					</section>
+					
+					<section class="layout-item">			<!-- Один из макетов -->
+						<div class="browser">			<!-- Кружочки -->
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						
+						<div class="layout-buy">		<!-- Всплывающая заставка -->
+							<h2 class="layout-buy-title">Sunset</h2>
+							<p>Интернет-магазин с личным кабинетом</p>
+							<a class="btn" href="#">10 000 р.</a>
+						</div>
+						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+							<img src="img/-store/layout_3.jpg" width="240" height="240" alt="Макет3">
+						</a>
+					</section>
+					
+					<section class="layout-item">			<!-- Один из макетов -->
+						<div class="browser">			<!-- Кружочки -->
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						
+						<div class="layout-buy">		<!-- Всплывающая заставка -->
+							<h2 class="layout-buy-title">Sunset</h2>
+							<p>Интернет-магазин с личным кабинетом</p>
+							<a class="btn" href="#">10 000 р.</a>
+						</div>
+						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+							<img src="img/-store/layout_4.jpg" width="240" height="240" alt="Макет4">
+						</a>
+					</section>
+					
+					<section class="layout-item">			<!-- Один из макетов -->
+						<div class="browser">			<!-- Кружочки -->
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						
+						<div class="layout-buy">		<!-- Всплывающая заставка -->
+							<h2 class="layout-buy-title">Sunset</h2>
+							<p>Интернет-магазин с личным кабинетом</p>
+							<a class="btn" href="#">10 000 р.</a>
+						</div>
+						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+							<img src="img/-store/layout_5.jpg" width="240" height="240" alt="Макет5">
+						</a>
+					</section>
+					
+					<section class="layout-item">			<!-- Один из макетов -->
+						<div class="browser">			<!-- Кружочки -->
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						
+						<div class="layout-buy">		<!-- Всплывающая заставка -->
+							<h2 class="layout-buy-title">Sunset</h2>
+							<p>Интернет-магазин с личным кабинетом</p>
+							<a class="btn" href="#">10 000 р.</a>
+						</div>
+						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+							<img src="img/-store/layout_6.jpg" width="240" height="240" alt="Макет6">
+						</a>
+					</section>
+
+				</div>
+			</div>
+			
+			<!-- Пагинатор страниц -->
+			<div class="paginator">
+				<ul class="paginator-list">
+					<li><a href="#" class="active">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">Следующая</a></li>
+			</div>
+		</main>
+		
+		
+				<!-- Карта с контактами -->
+				<div class="map clearfix">
+				<div class="container clearfix">
+					<div class="map-content">		<!-- Собственно карта (должна быть интерактивная!!!) -->
+						<img src="img/-index/map.jpg" width="1199" height="416" alt="Карта">		 <!-- ... -->
+						
+						<div class="marker">
+							<img src="img/-index/marker_map.png" width="182" height="190" alt="Маркер">
+						</div>
+						
+						<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
+							<div class="head">NЁRDS DESIGN STUDIO</div>
+									<p>191186, Санкт-Петербург,<br>
+									ул. Б.Конюшенная, д. 19/8<br>
+									<br>
+									тел. +7(812) 275-75-75</p>
+												
+									<a class="btn" href="#">Напишите нам</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+		</div>
+		
+		<!--Футер страницы -->
+		<footer class="main-footer">
+			<div class="container clearfix">
+				<div class="footer-social">
+					<a class="social-btn" href="#"><i class="icon-vk"></i></a>
+					<a class="social-btn" href="#"><i class="icon-facebook"></i></a>
+					<a class="social-btn" href="#"><i class="icon-instagramm"></i></a>
+				</div>
+				
+				<div class="footer-text">
+					<h2>Давайте дружить, это выгодно!</h2>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Скрипт формы обратной связи -->
+		<script>
+			
+		</script>
+		
+		<!-- Скрипт управления ползунком стоимости в Форме -->
+		<script>
+			
+		</script>
+	</body>
+  </html>
