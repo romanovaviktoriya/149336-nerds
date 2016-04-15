@@ -1,13 +1,13 @@
-/* Подключение иконочного шрифта --------------------------------- */
+п»ї/* РџРѕРґРєР»СЋС‡РµРЅРёРµ РёРєРѕРЅРѕС‡РЅРѕРіРѕ С€СЂРёС„С‚Р° --------------------------------- */
 @charset "UTF-8";
 
  @font-face {
   font-family: 'symbols-nerds';
-  src: url('../fonts/symbols-nerds.eot?94604853');
-  src: url('../fonts/symbols-nerds.eot?94604853#iefix') format('embedded-opentype'),
-       url('../fonts/symbols-nerds.woff?94604853') format('woff'),
-       url('../fonts/symbols-nerds.ttf?94604853') format('truetype'),
-       url('../fonts/symbols-nerds.svg?94604853#symbols-nerds') format('svg');
+  src: url('../font/symbols-nerds.eot?94604853');
+  src: url('../font/symbols-nerds.eot?94604853#iefix') format('embedded-opentype'),
+       url('../font/symbols-nerds.woff?94604853') format('woff'),
+       url('../font/symbols-nerds.ttf?94604853') format('truetype'),
+       url('../font/symbols-nerds.svg?94604853#symbols-nerds') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -58,14 +58,14 @@
 .icon-twitter:before { content: '\74'; } /* 't' */
 .icon-vk:before { content: '\76'; } /* 'v' */
 .icon-up-dir:before { content: '\25b2'; } /* '^' */
-.icon-down-dir:before { content: '\25bc'; } /* 'Ў' */
+.icon-down-dir:before { content: '\25bc'; } /* 'РЋ' */
 .icon-circle:before { content: '\25cb'; } /* '0' */
 .icon-circle-dot:before { content: '\25cf'; } /* '?' */
 .icon-check-off:before { content: '\2610'; } /* '?' */
 .icon-check-on:before { content: '\2611'; } /* '?' */
 .icon-instagramm:before { content: '\1f4f7'; } /* '\1f4f7' */
 
-/* Стили страницы ------------------------------------------------ */
+/* РЎС‚РёР»Рё СЃС‚СЂР°РЅРёС†С‹ ------------------------------------------------ */
 html,body{
     margin:0;
     padding:0;
@@ -79,7 +79,7 @@ body{
     background:white;
 }
 
-.container {         /* Общий контейнер шириной 880px */
+.container {         /* РћР±С‰РёР№ РєРѕРЅС‚РµР№РЅРµСЂ С€РёСЂРёРЅРѕР№ 880px */
 	width: 880px;
 	margin: 0 auto;
 	padding: 0 10px;
@@ -87,7 +87,7 @@ body{
 	outline: 1px solid yellow;
 }
 
-.clearfix::after {    /* Класс CLEARFIX */
+.clearfix::after {    /* РљР»Р°СЃСЃ CLEARFIX */
 	content: "";
 	display: table;
 	clear: both;
@@ -106,8 +106,8 @@ body{
 	cursor: pointer;
 }
 
-/* Хедер --------------------------------------------------------- */
-.main-header {          /* Хедер */
+/* РҐРµРґРµСЂ --------------------------------------------------------- */
+.main-header {          /* РҐРµРґРµСЂ */
 	margin-top: 0px;
 	margin-bottom: 82px;
 	/*padding-top: 28px;*/			/* ?.. */
@@ -115,21 +115,21 @@ body{
 	
 	outline: 1px solid red;
 }
-.main-header .container:first-child {		/* Первый блок-контейнер в Хедере (логотип и меню) */
+.main-header .container:first-child {		/* РџРµСЂРІС‹Р№ Р±Р»РѕРє-РєРѕРЅС‚РµР№РЅРµСЂ РІ РҐРµРґРµСЂРµ (Р»РѕРіРѕС‚РёРї Рё РјРµРЅСЋ) */
 	height: 84px;
 	
 	outline: 1px solid yellow;
 }
 
-.main-navigation {     /* Меню хедера */
+.main-navigation {     /* РњРµРЅСЋ С…РµРґРµСЂР° */
 	float: right;
-	width: 520px;		/* ... 580рх, но тогда остается лишнее место после Корзины... */
+	width: 520px;		/* ... 580СЂС…, РЅРѕ С‚РѕРіРґР° РѕСЃС‚Р°РµС‚СЃСЏ Р»РёС€РЅРµРµ РјРµСЃС‚Рѕ РїРѕСЃР»Рµ РљРѕСЂР·РёРЅС‹... */
 	margin-top: 48px;
 	
 	outline: 1px solid blue;
 }
 
-.logo {          /* Логотип */
+.logo {          /* Р›РѕРіРѕС‚РёРї */
 	float: left;
 	width: 139px;
 	margin-top: 23px;
@@ -138,14 +138,14 @@ body{
 	outline: 1px solid blue;
 }
 
-.main-navigation ul {   /* Список меню хедера */
+.main-navigation ul {   /* РЎРїРёСЃРѕРє РјРµРЅСЋ С…РµРґРµСЂР° */
 	margin: 0;
 	padding: 0;
-	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
+	font-size: 0;  /* Р±РѕСЂСЊР±Р° СЃ РїСЂРѕР±РµР»Р°РјРё РІ РёРЅР»Р°Р№РЅ-Р±Р»РѕРєР°С…! */
 	list-style: none;
 }
 
-.main-navigation li {    /* Элементы списка меню хедера */
+.main-navigation li {    /* Р­Р»РµРјРµРЅС‚С‹ СЃРїРёСЃРєР° РјРµРЅСЋ С…РµРґРµСЂР° */
 	display: inline-block;
 	font-family: 'Roboto Medium', sans-serif;
 	font-size: 14px;
@@ -153,7 +153,7 @@ body{
 	vertical-align: middle;
 }
 
-.main-navigation a {    /* Ссылки в меню хедера */
+.main-navigation a {    /* РЎСЃС‹Р»РєРё РІ РјРµРЅСЋ С…РµРґРµСЂР° */
 	position: relative;
 	display: block;
 	padding: 3px 20px;
@@ -164,40 +164,40 @@ body{
 	outline: 1px solid brown;
 }
 
-.main-navigation li:last-child a {		/* Последний элемент меню Хедера (корзина) */
+.main-navigation li:last-child a {		/* РџРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ РҐРµРґРµСЂР° (РєРѕСЂР·РёРЅР°) */
 	padding: 3px 0px 3px 30px;
 }
 
-li.active:last-child a::after {			/* Подчеркивание (псевдоэлемент) Корзины, если она открыта (class="active") */
+li.active:last-child a::after {			/* РџРѕРґС‡РµСЂРєРёРІР°РЅРёРµ (РїСЃРµРІРґРѕСЌР»РµРјРµРЅС‚) РљРѕСЂР·РёРЅС‹, РµСЃР»Рё РѕРЅР° РѕС‚РєСЂС‹С‚Р° (class="active") */
 	left: 0;
 	right: 0;
 }
 
-.main-navigation li:nth-child(5) {	/* Последний элемент списка меню хедера */
+.main-navigation li:nth-child(5) {	/* РџРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР° РјРµРЅСЋ С…РµРґРµСЂР° */
 	padding-right: 0;
 	/*padding-left: 30px;*/
 	margin-left: 45px;
 }
 
-.main-navigation a:hover {   /* Ссылки при наведении */
+.main-navigation a:hover {   /* РЎСЃС‹Р»РєРё РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	color: #fb565a;
 }
 
-.main-navigation a:active {		/* Ссылки при нажатии */
+.main-navigation a:active {		/* РЎСЃС‹Р»РєРё РїСЂРё РЅР°Р¶Р°С‚РёРё */
 	color: #bdbdbd;
 }
 
-.main-navigation .active a {  /* Активная ссылка меню хедера */
+.main-navigation .active a {  /* РђРєС‚РёРІРЅР°СЏ СЃСЃС‹Р»РєР° РјРµРЅСЋ С…РµРґРµСЂР° */
 	position: relative;
 }
 
-.main-navigation .active a:hover {  /* Активная ссылка меню хедера при наведении */
+.main-navigation .active a:hover {  /* РђРєС‚РёРІРЅР°СЏ СЃСЃС‹Р»РєР° РјРµРЅСЋ С…РµРґРµСЂР° РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	background: none;
 	cursor: default;
 	color: #000;
 }
 
-.main-navigation .active a::after {  /* Псевдоэлемент активной ссылки меню хедера */
+.main-navigation .active a::after {  /* РџСЃРµРІРґРѕСЌР»РµРјРµРЅС‚ Р°РєС‚РёРІРЅРѕР№ СЃСЃС‹Р»РєРё РјРµРЅСЋ С…РµРґРµСЂР° */
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -208,8 +208,8 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэлемент) Корзины, если
 	background-color: #fb565a;
 }
 
-.icon-basket {						/* Иконка Корзины */
-	/*color: black;		/* color: #bdbdbd; темно-серый */
+.icon-basket {						/* РРєРѕРЅРєР° РљРѕСЂР·РёРЅС‹ */
+	/*color: black;		/* color: #bdbdbd; С‚РµРјРЅРѕ-СЃРµСЂС‹Р№ */
 	opacity: 0.3;
 	position: absolute;
 	left: 0;
@@ -229,7 +229,7 @@ a:hover .icon-basket {
 	opacity: 1; 
 }
 
-/* Слайдер ------------------------------------------------------- */
+/* РЎР»Р°Р№РґРµСЂ ------------------------------------------------------- */
 .main-header .container:nth-child(2) {
 	padding-top: 42px;
 }
@@ -293,7 +293,7 @@ a:hover .icon-basket {
     font-weight:bold;
     color:black;
 }
-.slide .btn{					/* Кнопка в Слайдере */
+.slide .btn{					/* РљРЅРѕРїРєР° РІ РЎР»Р°Р№РґРµСЂРµ */
     width:240px;
     padding:10px 0;
     margin-top:25px;
@@ -326,7 +326,7 @@ a:hover .icon-basket {
     display: block;
 }
 
-/* Основной контент ---------------------------------------------- */
+/* РћСЃРЅРѕРІРЅРѕР№ РєРѕРЅС‚РµРЅС‚ ---------------------------------------------- */
 .main-container {
 	width: 1199px;
 	margin: 0 auto;
@@ -370,7 +370,7 @@ a:hover .icon-basket {
 	color: #283136;
 }
 
-.slogan-item .btn {					/* Кнопка в Слоганах */
+.slogan-item .btn {					/* РљРЅРѕРїРєР° РІ РЎР»РѕРіР°РЅР°С… */
     width:140px;
     margin-top:28px;
 }
@@ -449,7 +449,7 @@ a:hover .icon-basket {
 	font-family:  'Roboto Medium', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-	/*font-weight: bold;*/				/* ...надо ли указывать, что BOLD, если он итак Medium?.. */
+	/*font-weight: bold;*/				/* ...РЅР°РґРѕ Р»Рё СѓРєР°Р·С‹РІР°С‚СЊ, С‡С‚Рѕ BOLD, РµСЃР»Рё РѕРЅ РёС‚Р°Рє Medium?.. */
 	text-transform:uppercase;
 	padding-left: 0;
 }
@@ -458,7 +458,7 @@ a:hover .icon-basket {
 	font-family:  'Roboto Light', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-	padding-bottom: 25px;			/* ...Хотя из измерений исходя - 29рх... */
+	padding-bottom: 25px;			/* ...РҐРѕС‚СЏ РёР· РёР·РјРµСЂРµРЅРёР№ РёСЃС…РѕРґСЏ - 29СЂС…... */
 	list-style: none;
 	padding-left: 37px;
 	position: relative;
@@ -487,29 +487,29 @@ a:hover .icon-basket {
 	outline: 1px solid green;
 }
 
-.picture-logo {				/* Второй логотип в правой колонке */
+.picture-logo {				/* Р’С‚РѕСЂРѕР№ Р»РѕРіРѕС‚РёРї РІ РїСЂР°РІРѕР№ РєРѕР»РѕРЅРєРµ */
 	text-align: center;
 	margin-top: 59px;
 }
-.caption-logo {				/* Строка под вторым логотипом */
+.caption-logo {				/* РЎС‚СЂРѕРєР° РїРѕРґ РІС‚РѕСЂС‹Рј Р»РѕРіРѕС‚РёРїРѕРј */
 	margin-top: 30px;
 	margin-bottom: 70px;  
 	text-align: center;
 }
 
-.caption-logo h2 {			/* Заголовок строки под вторым логотипом */
+.caption-logo h2 {			/* Р—Р°РіРѕР»РѕРІРѕРє СЃС‚СЂРѕРєРё РїРѕРґ РІС‚РѕСЂС‹Рј Р»РѕРіРѕС‚РёРїРѕРј */
 	position: relative;
 	z-index:2;  
 	display: inline;
 	margin: 0;
-	padding: 0 15px;		/* ...косяк! Почему-то паддинг справа не показывает, хотя он есть! */
+	padding: 0 15px;		/* ...РєРѕСЃСЏРє! РџРѕС‡РµРјСѓ-С‚Рѕ РїР°РґРґРёРЅРі СЃРїСЂР°РІР° РЅРµ РїРѕРєР°Р·С‹РІР°РµС‚, С…РѕС‚СЏ РѕРЅ РµСЃС‚СЊ! */
 	font-size: 16px;
 	line-height: 8.56px;
 	text-align: center;
 	background-color: #fff;
 }
 
-.caption-logo h2:after {		/* Псевдоэлемент заголовка строки (горизонтальная полоса) */
+.caption-logo h2:after {		/* РџСЃРµРІРґРѕСЌР»РµРјРµРЅС‚ Р·Р°РіРѕР»РѕРІРєР° СЃС‚СЂРѕРєРё (РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїРѕР»РѕСЃР°) */
 	content: ""; 
 	position: relative;
 	top: -10px;
@@ -518,12 +518,12 @@ a:hover .icon-basket {
 	border-bottom: 2px solid #eee;
 }
 
-/* Логотипы ------------------------------------------------------ */
+/* Р›РѕРіРѕС‚РёРїС‹ ------------------------------------------------------ */
 .partners {
 	height: 166px;	
 	border-top: 2px solid #eee;
 	border-bottom: 2px solid #eee;
-	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
+	font-size: 0;  /* Р±РѕСЂСЊР±Р° СЃ РїСЂРѕР±РµР»Р°РјРё РІ РёРЅР»Р°Р№РЅ-Р±Р»РѕРєР°С…! */
 }
 .partner-item {
 	display: inline-block;
@@ -531,7 +531,7 @@ a:hover .icon-basket {
 	margin-top: 43px;
 	margin-right: 80px;
 	text-align: center;
-	vertical-align: middle;			/* ...не работает вертикальное выравнивание... */
+	vertical-align: middle;			/* ...РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ... */
 
 	outline: 1px solid red;
 }
@@ -552,7 +552,7 @@ a:hover .icon-basket {
 .partners .partner-item img:active {
 	opacity: 1;
 }
-/* Стили страницы Магазин -------------------------------------------------------------------------------------------------------- */
+/* РЎС‚РёР»Рё СЃС‚СЂР°РЅРёС†С‹ РњР°РіР°Р·РёРЅ -------------------------------------------------------------------------------------------------------- */
 .catalog .main-header {
 	margin-bottom: 76px;
 }
@@ -574,7 +574,7 @@ a:hover .icon-basket {
 	
 	outline: 1px solid red;
 }
-/* Форма --------------------------------------------------------- */
+/* Р¤РѕСЂРјР° --------------------------------------------------------- */
 .left-part-form {
 	width: 240px;
 	float: left;
@@ -586,7 +586,7 @@ a:hover .icon-basket {
 	float: right;
 	width: 560px;
 	/*margin-left: 320px;*/
-	padding-top: 46px;			/* Надо вставить Сортировку и уменьшить паддинг! */
+	padding-top: 46px;			/* РќР°РґРѕ РІСЃС‚Р°РІРёС‚СЊ РЎРѕСЂС‚РёСЂРѕРІРєСѓ Рё СѓРјРµРЅСЊС€РёС‚СЊ РїР°РґРґРёРЅРі! */
 	
 	outline: 1px solid blue;
 }
@@ -608,7 +608,7 @@ a:hover .icon-basket {
 }
 
 .layouts-group {
-	font-size: 0; /* Борьба с пробелами в инлайн-блоках */
+	font-size: 0; /* Р‘РѕСЂСЊР±Р° СЃ РїСЂРѕР±РµР»Р°РјРё РІ РёРЅР»Р°Р№РЅ-Р±Р»РѕРєР°С… */
 }
 
 .browser {
@@ -677,7 +677,7 @@ a:hover .icon-basket {
 	margin-bottom: 0;
 }*/
 
-.left-part-form input[type="radio"] {		/* Радиокнопки */
+.left-part-form input[type="radio"] {		/* Р Р°РґРёРѕРєРЅРѕРїРєРё */
 	display: none;
 }
 
@@ -745,7 +745,7 @@ a:hover .icon-basket {
 	content: '\2611';
 }
 
-.left-part-form .btn{					/* Кнопка в Форме */
+.left-part-form .btn{					/* РљРЅРѕРїРєР° РІ Р¤РѕСЂРјРµ */
     width: 150px;
     margin-top: ;
 	background-color: #f1f1f1;
@@ -754,41 +754,41 @@ a:hover .icon-basket {
 	/*border: none;*/
 }
 
-.left-part-form .btn:hover {				/* Кнопка в форме при наведении */
+.left-part-form .btn:hover {				/* РљРЅРѕРїРєР° РІ С„РѕСЂРјРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	background-color: #e5e5e5;
 }
 
-.left-part-form .btn:active {			/* Кнопка в форме при нажатии */
+.left-part-form .btn:active {			/* РљРЅРѕРїРєР° РІ С„РѕСЂРјРµ РїСЂРё РЅР°Р¶Р°С‚РёРё */
 	background-color: #d5d5d5;
 }
 
-/* События элементов формы при НАВЕДЕНИИ */
-.left-part-form input[type="radio"] + label:hover, 						/* при наведении на лейблы */
+/* РЎРѕР±С‹С‚РёСЏ СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹ РїСЂРё РќРђР’Р•Р”Р•РќРР */
+.left-part-form input[type="radio"] + label:hover, 						/* РїСЂРё РЅР°РІРµРґРµРЅРёРё РЅР° Р»РµР№Р±Р»С‹ */
 .left-part-form input[type="radio"]:checked + label:hover, 
 .left-part-form input[type="checkbox"] + label:hover,
 .left-part-form input[type="checkbox"]:checked + label:hover {
 	color: #000;
 }
 
-.left-part-form input[type="radio"] + label:hover::before, 				/* при наведении на "псевдо" радиобаттоны и чекбоксы */
+.left-part-form input[type="radio"] + label:hover::before, 				/* РїСЂРё РЅР°РІРµРґРµРЅРёРё РЅР° "РїСЃРµРІРґРѕ" СЂР°РґРёРѕР±Р°С‚С‚РѕРЅС‹ Рё С‡РµРєР±РѕРєСЃС‹ */
 .left-part-form input[type="radio"]:checked + label:hover::before, 
 .left-part-form input[type="checkbox"] + label:hover::before,
 .left-part-form input[type="checkbox"]:checked + label:hover::before {	
 	color: #b5b5b5; 
 }
 
-/* События элементов формы при БЛОКИРОВКЕ */
+/* РЎРѕР±С‹С‚РёСЏ СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹ РїСЂРё Р‘Р›РћРљРР РћР’РљР• */
 .left-part-form input[type="radio"]:disabled,
 .left-part-form input[type="radio"]:checked:disabled, 
 .left-part-form input[type="checkbox"]:disabled,
-.left-part-form input[type="checkbox"]:checked:disabled {					/* Неправильные селекторы видимо...не работает... */
+.left-part-form input[type="checkbox"]:checked:disabled {					/* РќРµРїСЂР°РІРёР»СЊРЅС‹Рµ СЃРµР»РµРєС‚РѕСЂС‹ РІРёРґРёРјРѕ...РЅРµ СЂР°Р±РѕС‚Р°РµС‚... */
 	opacity: 0.4;
 }
 
 .left-part-form input[type="radio"]:disabled::before,
 .left-part-form input[type="radio"]:checked:disabled::before, 
 .left-part-form input[type="checkbox"] + label:disabled::before,
-.left-part-form input[type="checkbox"]:checked + label:disabled::before {			/* Неправильные селекторы видимо ...не работает... */
+.left-part-form input[type="checkbox"]:checked + label:disabled::before {			/* РќРµРїСЂР°РІРёР»СЊРЅС‹Рµ СЃРµР»РµРєС‚РѕСЂС‹ РІРёРґРёРјРѕ ...РЅРµ СЂР°Р±РѕС‚Р°РµС‚... */
 	opacity: 0.3;
 }
 
@@ -854,8 +854,8 @@ a:hover .icon-basket {
 }
 /**/
 
-/* Окончание стилей страницы Магазин --------------------------------------------------------------------------------------------- */
-/* Пагинатор ----------------------------------------------------- */
+/* РћРєРѕРЅС‡Р°РЅРёРµ СЃС‚РёР»РµР№ СЃС‚СЂР°РЅРёС†С‹ РњР°РіР°Р·РёРЅ --------------------------------------------------------------------------------------------- */
+/* РџР°РіРёРЅР°С‚РѕСЂ ----------------------------------------------------- */
 .paginator {
 	/*text-align: center;*/
 }
@@ -907,14 +907,14 @@ ul.paginator-list li a:not(.active) {
 	background-color: #f1f1f1;
 }
 
-ul.paginator-list li a:hover:not(.active) {			/* Супер-селектор (надо применить для ссылок меню)! Для всех НЕ активных ссылок Пагинатора */
+ul.paginator-list li a:hover:not(.active) {			/* РЎСѓРїРµСЂ-СЃРµР»РµРєС‚РѕСЂ (РЅР°РґРѕ РїСЂРёРјРµРЅРёС‚СЊ РґР»СЏ СЃСЃС‹Р»РѕРє РјРµРЅСЋ)! Р”Р»СЏ РІСЃРµС… РќР• Р°РєС‚РёРІРЅС‹С… СЃСЃС‹Р»РѕРє РџР°РіРёРЅР°С‚РѕСЂР° */
 	background-color: #e5e5e5;
 }
 
 ul.paginator-list li a:active:not(.active) {
 	background-color: #d5d5d5;
 }
-/* Карта --------------------------------------------------------- */
+/* РљР°СЂС‚Р° --------------------------------------------------------- */
 .map-content {
 	position: relative;
 	width: 1199px;
@@ -947,7 +947,7 @@ ul.paginator-list li a:active:not(.active) {
 }
 
 .map-contacts .head {
-	font-family: 'Roboto Medium', sans-serif;		/* ...какой именно шрифт - неизвестно */
+	font-family: 'Roboto Medium', sans-serif;		/* ...РєР°РєРѕР№ РёРјРµРЅРЅРѕ С€СЂРёС„С‚ - РЅРµРёР·РІРµСЃС‚РЅРѕ */
 	font-size: 16px;
 	line-height: 30px;
 }
@@ -959,7 +959,7 @@ ul.paginator-list li a:active:not(.active) {
 	color: #666666;
 }
 
-.map-contacts .btn {					/* Кнопка в контактах на Карте */
+.map-contacts .btn {					/* РљРЅРѕРїРєР° РІ РєРѕРЅС‚Р°РєС‚Р°С… РЅР° РљР°СЂС‚Рµ */
     display: block;
     width: 204px;
     padding: 9px 0 12px 0;
@@ -974,11 +974,11 @@ ul.paginator-list li a:active:not(.active) {
 	cursor: pointer;
 }
 
-.map-contacts .btn:hover {			/* Кнопка в контактах на Карте при наведении */
+.map-contacts .btn:hover {			/* РљРЅРѕРїРєР° РІ РєРѕРЅС‚Р°РєС‚Р°С… РЅР° РљР°СЂС‚Рµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	background-color: #d6494d;
 }
 
-.map-contacts .btn:active {			/* Кнопка в контактах на Карте при нажатии */
+.map-contacts .btn:active {			/* РљРЅРѕРїРєР° РІ РєРѕРЅС‚Р°РєС‚Р°С… РЅР° РљР°СЂС‚Рµ РїСЂРё РЅР°Р¶Р°С‚РёРё */
 	background-color: #b63538;
 }
 
@@ -988,7 +988,7 @@ ul.paginator-list li a:active:not(.active) {
 	right: 207px;
 }
 
-/* Футер --------------------------------------------------------- */
+/* Р¤СѓС‚РµСЂ --------------------------------------------------------- */
 .main-footer {
 	padding-top: 77px;
 	padding-bottom: 77px;
@@ -997,14 +997,14 @@ ul.paginator-list li a:active:not(.active) {
 	outline: 1px solid red;	
 }
 
-.main-footer a {						/* Ссылкам социальных кнопок указываем иконочный шрифт */
+.main-footer a {						/* РЎСЃС‹Р»РєР°Рј СЃРѕС†РёР°Р»СЊРЅС‹С… РєРЅРѕРїРѕРє СѓРєР°Р·С‹РІР°РµРј РёРєРѕРЅРѕС‡РЅС‹Р№ С€СЂРёС„С‚ */
 	font-family: "symbols-nerds";
 	font-style: normal;
 	font-weight: normal;
 	padding-top: 19px;
 }
 
-.footer-social {				/* Группа социальных кнопок */
+.footer-social {				/* Р“СЂСѓРїРїР° СЃРѕС†РёР°Р»СЊРЅС‹С… РєРЅРѕРїРѕРє */
 	float: left;
 	min-width: 240px;
 	/*margin-right: 80px;*/
@@ -1012,7 +1012,7 @@ ul.paginator-list li a:active:not(.active) {
 	outline: 1px solid blue;
 }
 
-.footer-text {			/* Текстовый блок футера */
+.footer-text {			/* РўРµРєСЃС‚РѕРІС‹Р№ Р±Р»РѕРє С„СѓС‚РµСЂР° */
 	float: right;
 	min-width: 560px;
 	
@@ -1035,7 +1035,7 @@ ul.paginator-list li a:active:not(.active) {
 	font-weight: normal;
 }
 
-.social-btn {						/* Социальные кнопки в футере */
+.social-btn {						/* РЎРѕС†РёР°Р»СЊРЅС‹Рµ РєРЅРѕРїРєРё РІ С„СѓС‚РµСЂРµ */
 	margin: 0;
 	display: inline-block;
 	width: 62px;
@@ -1050,25 +1050,25 @@ ul.paginator-list li a:active:not(.active) {
 	text-align: center;
 }
 
-.social-btn:last-child {				/* Последняя из социальных кнопок */
+.social-btn:last-child {				/* РџРѕСЃР»РµРґРЅСЏСЏ РёР· СЃРѕС†РёР°Р»СЊРЅС‹С… РєРЅРѕРїРѕРє */
 	margin-right: 0;
 }
 
-.icon-vk, .icon-facebook, .icon-instagramm {			/* Иконкам задаем белый цвет в любых состояниях */
+.icon-vk, .icon-facebook, .icon-instagramm {			/* РРєРѕРЅРєР°Рј Р·Р°РґР°РµРј Р±РµР»С‹Р№ С†РІРµС‚ РІ Р»СЋР±С‹С… СЃРѕСЃС‚РѕСЏРЅРёСЏС… */
 	color: white;
 }
 
-.social-btn:hover {									/* Фон социальных сетей при наведении */
+.social-btn:hover {									/* Р¤РѕРЅ СЃРѕС†РёР°Р»СЊРЅС‹С… СЃРµС‚РµР№ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	background-color: #fb565a;
 }
 
-.social-btn:active {									/* Фон социальных кнопок при нажатии */
+.social-btn:active {									/* Р¤РѕРЅ СЃРѕС†РёР°Р»СЊРЅС‹С… РєРЅРѕРїРѕРє РїСЂРё РЅР°Р¶Р°С‚РёРё */
 	background-color: #d6494d;
 }
 
-/* Модальное окно Вход ------------------------------------------ */
+/* РњРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ Р’С…РѕРґ ------------------------------------------ */
 .modal-window {
-	display: none;									/* Написать JS, меняющий значение display с "none" на "block" */
+	display: none;									/* РќР°РїРёСЃР°С‚СЊ JS, РјРµРЅСЏСЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ display СЃ "none" РЅР° "block" */
 	position: relative;
 	bottom: 668px;
 	left: 50%;
@@ -1144,14 +1144,14 @@ ul.paginator-list li a:active:not(.active) {
 	margin-bottom: 48px;
 }
 
-.login-form .btn {						/* Кнопка Отправить в модальном окне Напишите нам  */
+.login-form .btn {						/* РљРЅРѕРїРєР° РћС‚РїСЂР°РІРёС‚СЊ РІ РјРѕРґР°Р»СЊРЅРѕРј РѕРєРЅРµ РќР°РїРёС€РёС‚Рµ РЅР°Рј  */
     display: block;
 	float: left;
 	width: 460px;
     border: none;
 	outline: none;
 	font-size: 12px;
-	margin-bottom: 49px;			/* ...почему-то не работает... */
+	margin-bottom: 49px;			/* ...РїРѕС‡РµРјСѓ-С‚Рѕ РЅРµ СЂР°Р±РѕС‚Р°РµС‚... */
 }
 
 .login-form .btn:hover {
