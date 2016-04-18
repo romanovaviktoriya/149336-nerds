@@ -93,7 +93,7 @@ body{
 	clear: both;
 }
 
-.btn {
+.btn {					/* Кнопки */
     display:block;
     padding:12px 0;
     font-size:12px;
@@ -184,7 +184,8 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэ�
 }
 
 .main-navigation a:active {		/* Ссылки при нажатии */
-	color: #bdbdbd;
+	opacity: 0.4;				/*color: #bdbdbd;*/
+	color: black;
 }
 
 .main-navigation .active a {  /* Активная ссылка меню хедера */
@@ -218,15 +219,11 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэ�
 
 a:hover .icon-basket {
 	opacity: 1; 
-	color: whatever;
+	/*color: whatever;*/
 }
 
 a:active .icon-basket {
 	opacity: 0.15; 
-}
-	
-a:hover .icon-basket {
-	opacity: 1; 
 }
 
 /* Слайдер ------------------------------------------------------- */
@@ -246,7 +243,7 @@ a:hover .icon-basket {
 }
 .slider input[type=radio] {
     position:absolute;
-    opacity:0;
+  	display: none;
 }
 .slider-controls{
     position:absolute;
@@ -327,7 +324,7 @@ a:hover .icon-basket {
 }
 
 /* Основной контент ---------------------------------------------- */
-.main-container {
+.main-container {			/* Контейнер под карту (если интерактивная - убрать!) */
 	width: 1199px;
 	margin: 0 auto;
 	padding: 0;
@@ -335,35 +332,35 @@ a:hover .icon-basket {
 	outline: 1px solid black;
 }
 
-.slogan {
+.slogan {					/* Слоганы */
 	padding-bottom: 80px;
 	border-bottom: 2px solid #eeeeee;
 	
 	outline: 1px solid blue;
 }
 
-.slogan-item {
+.slogan-item {					/* Каждый слоган */
 	float: left;
 	width: 240px;
 	margin-right: 80px;
 }
 
-.slogan-item:nth-child(3) {
+.slogan-item:nth-child(3) {		/* Последний слоган */
 	margin-right: 0;
 }
 
-.slogan-item img {
+.slogan-item img {				/* Изображения слоганов */
 	margin-bottom: 25px;
 }
 
-.slogan-title {
+.slogan-title {					/* Заголовок слогана */
 	font-family: 'Roboto Medium', sans-serif;
 	font-size: 18px;
 	line-height: 30px;
 	color: #000;
 }
 
-.slogan-item p {
+.slogan-item p {					/* Абзац слогана */
 	font-family: 'Roboto Light', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
@@ -375,46 +372,46 @@ a:hover .icon-basket {
     margin-top:28px;
 }
 
-.slogan-item:nth-child(2) .btn {
+.slogan-item:nth-child(2) .btn {		/* Кнопка 2-го слогана */
 	background:#00ca74;
 }
 
-.slogan-item:nth-child(3) .btn {
+.slogan-item:nth-child(3) .btn {		/* Кнопка 3-го слогана */
 	background:#efc84a;
 }
 
-.slogan-item:nth-child(1) .btn:hover {
+.slogan-item:nth-child(1) .btn:hover {	/* Кнопка 1-го слогана при наведении */
 	background: #d6494d;
 }
 
-.slogan-item:nth-child(2) .btn:hover {
+.slogan-item:nth-child(2) .btn:hover {	/* Кнопка 2-го слогана при наведении */
 	background:#01a25e;
 }
 
-.slogan-item:nth-child(3) .btn:hover {
+.slogan-item:nth-child(3) .btn:hover {	/* Кнопка 3-го слогана при наведении */
 	background:#d6ae2c;
 }
 
-.slogan-item:nth-child(1) .btn:active {
+.slogan-item:nth-child(1) .btn:active {		/* Кнопка 1-го слогана при нажатии */
 	background: #b63538;
 }
 
-.slogan-item:nth-child(2) .btn:active {
+.slogan-item:nth-child(2) .btn:active {		/* Кнопка 2-го слогана при нажатии */
 	background: #009053;
 }
 
-.slogan-item:nth-child(3) .btn:active {
+.slogan-item:nth-child(3) .btn:active {		/* Кнопка 3-го слогана при нажатии */
 	background: #c09b24;
 }
 
-.content {
+.content {					/* Контейнер основного контента */
 	padding: 0;
 	margin: 0;
 	
 	outline: 1px solid blue;
 }
 
-.content-column-left {
+.content-column-left {		/* Левая колонка контента */
 	float: left;
 	width: 560px;
 	padding-top: 71px;
@@ -423,7 +420,7 @@ a:hover .icon-basket {
 	outline: 1px solid green;
 }
 
-.content-column-left h1 {
+.content-column-left h1 {		/* Заголовок левой колонки */
 	margin: 0;
 	font-family: 'Roboto Medium', sans-serif;
 	font-size: 36px;
@@ -431,7 +428,7 @@ a:hover .icon-basket {
 	color: #000;
 }
 
-.content-column-left p {
+.content-column-left p {			/* Абзац текста левой колонки */
 	font-family: 'Roboto Light', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
@@ -440,21 +437,20 @@ a:hover .icon-basket {
 	margin-bottom: 45px;
 }
 
-.list {
+.list {							/* Список неупорядоченный */
 	margin: 0;
 	padding: 0;
 }
 
-.list .subtitle {
+.list .subtitle {				/* Подзаголовок списка */
 	font-family:  'Roboto Medium', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-	/*font-weight: bold;*/				/* ...надо ли указывать, что BOLD, если он итак Medium?.. */
 	text-transform:uppercase;
 	padding-left: 0;
 }
 
-.list li {
+.list li {						/* Элементы списка */
 	font-family:  'Roboto Light', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
@@ -464,11 +460,11 @@ a:hover .icon-basket {
 	position: relative;
 }
 
-.list li:last-child {
+.list li:last-child {				/* Последний элемент списка */
 	padding-bottom: 71px;
 }
 
-.list li:not(:first-child):before {
+.list li:not(:first-child):before {		/* Псевдоэлемент всех элементов списка, кроме последнего */
 	content: '';
 	position: absolute;
     top: 9px;
@@ -478,7 +474,7 @@ a:hover .icon-basket {
 	background-color: #fb565a;
 }
 
-.content-column-right {
+.content-column-right {			/* Правая колонка контента */
 	float: right;
 	width: 240px;
 	padding: 0;
@@ -487,7 +483,7 @@ a:hover .icon-basket {
 	outline: 1px solid green;
 }
 
-.picture-logo {				/* Второй логотип в правой колонке */
+.picture-logo {				/* Логотип (второй) в правой колонке */
 	text-align: center;
 	margin-top: 59px;
 }
@@ -502,14 +498,14 @@ a:hover .icon-basket {
 	z-index:2;  
 	display: inline;
 	margin: 0;
-	padding: 0 15px;		/* ...косяк! Почему-то паддинг справа не показывает, хотя он есть! */
+	padding: 0 15px;
 	font-size: 16px;
-	line-height: 8.56px;
+	line-height: 16px;
 	text-align: center;
 	background-color: #fff;
 }
 
-.caption-logo h2:after {		/* Псевдоэлемент заголовка строки (горизонтальная полоса) */
+.caption-logo:after {		/* Псевдоэлемент заголовка строки (горизонтальная полоса) */
 	content: ""; 
 	position: relative;
 	top: -10px;
@@ -519,76 +515,166 @@ a:hover .icon-basket {
 }
 
 /* Логотипы ------------------------------------------------------ */
-.partners {
+.partners {					/* Блок логотипов */
 	height: 166px;	
 	border-top: 2px solid #eee;
 	border-bottom: 2px solid #eee;
 	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
 }
-.partner-item {
+.partner-item {				/* Логотип */
 	display: inline-block;
 	width: 240px;
 	margin-top: 43px;
 	margin-right: 80px;
 	text-align: center;
-	vertical-align: middle;			/* ...не работает вертикальное выравнивание... */
+	vertical-align: middle;
 
 	outline: 1px solid red;
 }
 
-.partner-item:last-child {
+.partner-item:last-child {		/* Последний логотип партнера */
 	margin-right: 0;
 }
 
-.partners .partner-item img {
+.partners .partner-item img {			/* Изображение логотипа */
 	opacity: 0.2;
 	vertical-align: middle;			
 }
 
-.partners .partner-item img:hover {
+.partners .partner-item img:hover {		/* Изображение логотипа при наведении */
 	opacity: 1;
 }
 
-.partners .partner-item img:active {
+.partners .partner-item img:active {		/* Изображение логотипа при нажатии */
 	opacity: 1;
 }
+
 /* Стили страницы Магазин -------------------------------------------------------------------------------------------------------- */
-.catalog .main-header {
+.catalog .main-header {			/* Хедер страницы Магазин */
 	margin-bottom: 76px;
 }
-.catalog .container:nth-child(2) {
+.catalog .container:nth-child(2) {		/* Контейнер приветствия */
 	padding-top: 70px;
 	height: 244px;
+	width: 660px;
 }
 
-.welcome {
+.welcome {								/* Дополнительный класс приветствия */
 	display: block;
-	font-family: 'Roboto Thin', sans-serif;
+	font-family: 'Roboto Medium', sans-serif;
 	font-size: 40px;
 	line-height: auto;
 	color: black;
 	text-transform:uppercase;
 	text-align: center;
 	vertical-align: middle;
-	padding: 0 120px;
+	padding: 0 110px;
 	
 	outline: 1px solid red;
 }
-/* Форма --------------------------------------------------------- */
-.left-part-form {
+/* Форма выбора макетов ------------------------------------------ */
+.left-part-form {		/* Контейнер формы выбора макетов (слева) */
 	width: 240px;
 	float: left;
 	
 	outline: 1px solid blue;
 }
 
-.right-part-items {				/* ... */
+.right-part-items {				/* Правая часть контента (сортировка и макеты) */
 	float: right;
 	width: 560px;
-	/*margin-left: 320px;*/
-	padding-top: 46px;			/* Надо вставить Сортировку и уменьшить паддинг! */
+	/*padding-top: 46px;			/* Надо вставить Сортировку и уменьшить паддинг! */
 	
 	outline: 1px solid blue;
+}
+
+.sorter {
+	float: left;
+	margin-bottom: 22px;
+}
+
+.sort-up-down {
+	float: left;
+	margin-bottom: 22px;
+	margin-left: 60px;
+}
+
+.sorter ul {   /* Список Сортировка */
+	margin: 0;
+	padding: 0;
+	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
+	list-style: none;
+}
+
+.sort-list li {    /* Элементы списка Сортировки */
+	display: inline-block;
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	vertical-align: middle;
+	text-transform: uppercase;
+	padding: 3px 20px;
+	
+	outline: 1px solid pink;
+}
+.sort-list li:first-child {	/* Первый элемент сортировки (заголовок) */
+	padding-left: 0;
+}
+
+.sort-list .activity a {		/* Ссылка внутри активного элемента списка сортировки */
+	border: none;
+	/*color: #000;*/
+	opacity: 1;
+}
+
+.sort-list a:active,.sort-list .activity a{
+	opacity:1;
+	border:none;
+}
+
+
+.sort-list a {    /* Ссылки в Сортировке */
+	position: relative;
+	display: block;
+	
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+	opacity: 0.3;	
+	border-bottom: 1px dotted #00ca74;
+}
+
+.sort-list a:hover {
+	border-bottom-style: solid;
+	opacity: 1;
+}
+
+.sort-list li h3 {
+	margin: 0;
+}
+
+.icon-down-dir, .icon-up-dir {
+	font-family: "symbols-nerds";
+	font-size: 23px;
+	line-height: 20px;
+	color: #c1c1c1;
+}
+
+.icon-down-dir:hover, .icon-up-dir:hover {
+	color: #b5b5b5;
+}
+
+.icon-down-dir:active, .icon-up-dir:active {
+	color: #000;
+}
+
+.sort-up-down .active i {
+	color: #00ca74;
+}
+
+.sort-up-down a:nth-of-type(2) {
+	margin-left: -15px;
+	margin-right: -17px;
 }
 
 .layout-item {
@@ -751,7 +837,8 @@ a:hover .icon-basket {
 	background-color: #f1f1f1;
 	color: #000;
 	outline: none;
-	/*border: none;*/
+	font-weight: bold;
+	border: none;
 }
 
 .left-part-form .btn:hover {				/* Кнопка в форме при наведении */
@@ -760,6 +847,7 @@ a:hover .icon-basket {
 
 .left-part-form .btn:active {			/* Кнопка в форме при нажатии */
 	background-color: #d5d5d5;
+	box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
 }
 
 /* События элементов формы при НАВЕДЕНИИ */
@@ -778,17 +866,19 @@ a:hover .icon-basket {
 }
 
 /* События элементов формы при БЛОКИРОВКЕ */
-.left-part-form input[type="radio"]:disabled,
-.left-part-form input[type="radio"]:checked:disabled, 
-.left-part-form input[type="checkbox"]:disabled,
-.left-part-form input[type="checkbox"]:checked:disabled {					/* Неправильные селекторы видимо...не работает... */
+.left-part-form input[type="radio"]:disabled + label,					/* лейблы при блокировке input[] */
+.left-part-form input[type="radio"]:checked:disabled + label, 
+.left-part-form input[type="checkbox"]:disabled + label,
+.left-part-form input[type="checkbox"]:checked:disabled + label {
+	color: #283136;
 	opacity: 0.4;
 }
 
-.left-part-form input[type="radio"]:disabled::before,
-.left-part-form input[type="radio"]:checked:disabled::before, 
-.left-part-form input[type="checkbox"] + label:disabled::before,
-.left-part-form input[type="checkbox"]:checked + label:disabled::before {			/* Неправильные селекторы видимо ...не работает... */
+.left-part-form input[type="radio"]:disabled + label::before,			/* "псевдо-" радиобаттоны и чекбоксы при блокировке */
+.left-part-form input[type="radio"]:checked:disabled + label::before, 
+.left-part-form input[type="checkbox"]:disabled + label::before,
+.left-part-form input[type="checkbox"]:checked:disabled + label::before {
+	color: #b5b5b5;
 	opacity: 0.3;
 }
 
@@ -913,6 +1003,7 @@ ul.paginator-list li a:hover:not(.active) {			/* Супер-селектор (н
 
 ul.paginator-list li a:active:not(.active) {
 	background-color: #d5d5d5;
+	box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
 }
 /* Карта --------------------------------------------------------- */
 .map-content {
@@ -1068,18 +1159,17 @@ ul.paginator-list li a:active:not(.active) {
 
 /* Модальное окно Вход ------------------------------------------ */
 .modal-window {
-	display: none;									/* Написать JS, меняющий значение display с "none" на "block" */
-	position: relative;
-	bottom: 668px;
+	display: block;									/* Написать JS, меняющий значение display с "none" на "block" */
+	position: absolute;					/**/
 	left: 50%;
-	/*margin-bottom: 250px;*/
-	margin-left: -315px;
-	/*margin-left: 115px;*/
+	top: 50%; 							/**/
+	transform:translate(-50%, -50%);	/**/
 	width: 460px;
 	padding: 56px 90px 50px 80px;
 	background-color: #fff;
 	color: #000;
 	box-shadow: 0 20px 40px rgba(0,0,0,.75);
+	
 }
 
 .modal-window-close {
@@ -1151,7 +1241,7 @@ ul.paginator-list li a:active:not(.active) {
     border: none;
 	outline: none;
 	font-size: 12px;
-	margin-bottom: 49px;			/* ...почему-то не работает... */
+	/*margin-bottom: 49px;			/* ...почему-то не работает... */
 }
 
 .login-form .btn:hover {

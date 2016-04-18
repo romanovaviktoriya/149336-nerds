@@ -27,17 +27,11 @@
 						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
 					</ul>
 				</nav>
-			</div> <!-- -->
-				<!--	
-				<div class="user-block">
-					<a class="login" href="#">Корзина</a>  <!-- По клику открывается модальное окно с формой входа! --
-				</div>
-				-->
-			<div class="container clearfix">	
+			</div> 
+			
+			<div class="container welcome clearfix">	
 				<!-- Приветствие магазина -->
-				<div class="welcome">
-					Добро пожаловать в магазин готовых макетов
-				</div>
+				Добро пожаловать в магазин готовых макетов
 			</div>
 		</header>
 		
@@ -92,18 +86,10 @@
 				<div class="sorting clearfix">
 					<div class="sorter">
 						<ul class="sort-list">
-							<li>
-								<h3 class="sort-title">Сортировать:</h3>
-							</li>
-							<li class="active">
-								<a href="#">По цене</a>
-							</li>
-							<li>
-								<a href="#">По типу</a>
-							</li>
-							<li>
-								<a href="#">По функционалу</a>
-							</li>
+							<li><h3 class="sort-title">Сортировать:</h3></li>
+							<li class="activity"><a href="#">По цене</a></li>
+							<li><a href="#">По типу</a></li>
+							<li><a href="#">По функционалу</a></li>
 						</ul>
 					</div>
 						
@@ -273,6 +259,31 @@
 				</div>
 			</div>
 		</footer>
+		
+		<!-- Всплывающее модальное окно Напишите нам-->
+		<div class="modal-window">
+			<!-- Кнопка Закрыть -->
+			<div class="modal-window-close">
+				закрыть
+			</div>
+			
+			<!-- Форма обратной связи -->
+			<form class="login-form clearfix" action="/echo" method="post">
+				<div class="left-part">
+					<label for="name">Ваше имя:</label><br>
+					<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
+				</div>
+				
+				<div class="right-part">
+					<label for="e-mail">Ваш е-mail:</label><br>
+					<input type="email" name="e-mail" id="e-mail" placeholder="Для отправки ответа" required><br>
+				</div>
+				
+				<label for="letter">Текст письма:</label><br>
+				<textarea name="letter" id="letter" cols="56" rows="4" placeholder="В свободной форме" required=""></textarea>
+				<button type="submit" class="btn">Отправить</button>
+			</form>
+		</div>
 		
 		<!-- Скрипт формы обратной связи -->
 		<script>

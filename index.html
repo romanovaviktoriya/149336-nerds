@@ -42,7 +42,7 @@
 					<div class="slides">
 						<div class="slide">
 							<div class="slide-text">
-								<div class="slide-title">Долго, дорого, скрупулезно</div>
+								<h2 class="slide-title">Долго, дорого, скрупулезно</h2>
 									<p>Математически выверенный дизайн<br>
 									для вашего сайта или мобильного приложения.</p>
 									<a class="btn" href="#">Узнать больше</a>
@@ -201,7 +201,7 @@
 			</div>
 			
 			<!-- Форма обратной связи -->
-			<form class="login-form" action="/echo" method="post">
+			<form class="login-form clearfix" action="/echo" method="post">
 				<div class="left-part">
 					<label for="name">Ваше имя:</label><br>
 					<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
@@ -213,8 +213,7 @@
 				</div>
 				
 				<label for="letter">Текст письма:</label><br>
-				<textarea rows="4" cols="56" name="letter" id="letter" placeholder="В свободной форме" required>
-				</textarea><br>
+				<textarea name="letter" id="letter" cols="56" rows="4" placeholder="В свободной форме" required=""></textarea>
 				<button type="submit" class="btn">Отправить</button>
 			</form>
 		</div>
