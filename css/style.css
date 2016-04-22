@@ -72,7 +72,8 @@ html,body{
 }
 body{
     font-size:16px;
-    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Roboto Medium', Arial, sans-serif;
+	line-height: 22px;
     font-weight: 300;
     font-style: normal;
     color:black;
@@ -83,8 +84,6 @@ body{
 	width: 880px;
 	margin: 0 auto;
 	padding: 0 10px;
-	
-	outline: 1px solid yellow;
 }
 
 .clearfix::after {    /* Класс CLEARFIX */
@@ -110,23 +109,16 @@ body{
 .main-header {          /* Хедер */
 	margin-top: 0px;
 	margin-bottom: 82px;
-	/*padding-top: 28px;*/			/* ?.. */
 	background: #eeeeee;
-	
-	outline: 1px solid red;
 }
 .main-header .container:first-child {		/* Первый блок-контейнер в Хедере (логотип и меню) */
 	height: 84px;
-	
-	outline: 1px solid yellow;
 }
 
 .main-navigation {     /* Меню хедера */
 	float: right;
 	width: 520px;		/* ... 580рх, но тогда остается лишнее место после Корзины... */
 	margin-top: 48px;
-	
-	outline: 1px solid blue;
 }
 
 .logo {          /* Логотип */
@@ -134,8 +126,6 @@ body{
 	width: 139px;
 	margin-top: 23px;
 	margin-bottom: 41px;
-	
-	outline: 1px solid blue;
 }
 
 .main-navigation ul {   /* Список меню хедера */
@@ -147,7 +137,7 @@ body{
 
 .main-navigation li {    /* Элементы списка меню хедера */
 	display: inline-block;
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 30px;
 	vertical-align: middle;
@@ -160,8 +150,6 @@ body{
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
-	
-	outline: 1px solid brown;
 }
 
 .main-navigation li:last-child a {		/* Последний элемент меню Хедера (корзина) */
@@ -175,7 +163,6 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэ�
 
 .main-navigation li:nth-child(5) {	/* Последний элемент списка меню хедера */
 	padding-right: 0;
-	/*padding-left: 30px;*/
 	margin-left: 45px;
 }
 
@@ -205,13 +192,11 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэ�
 	left: 20px;
 	right: 20px;
 	height: 2px;
-	/*margin-right: 15px;   */
 	background-color: #fb565a;
 }
 
 .icon-basket {						/* Иконка Корзины */
-	/*color: black;		/* color: #bdbdbd; темно-серый */
-	opacity: 0.3;
+	opacity: 0.3;					/* color: #bdbdbd; темно-серый */
 	position: absolute;
 	left: 0;
 }
@@ -219,7 +204,6 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэ�
 
 a:hover .icon-basket {
 	opacity: 1; 
-	/*color: whatever;*/
 }
 
 a:active .icon-basket {
@@ -237,12 +221,8 @@ a:active .icon-basket {
     height:310px;
     margin:0 auto;
 	bottom: 0;
-	
-	outline: 1px solid blue;
-	
 }
 .slider input[type=radio] {
-    position:absolute;
   	display: none;
 }
 .slider-controls{
@@ -286,8 +266,7 @@ a:active .icon-basket {
 }
 .slide-title{
     font-size:36px;
-    line-height:1;
-    font-weight:bold;
+    line-height:36px;
     color:black;
 }
 .slide .btn{					/* Кнопка в Слайдере */
@@ -325,18 +304,14 @@ a:active .icon-basket {
 
 /* Основной контент ---------------------------------------------- */
 .main-container {			/* Контейнер под карту (если интерактивная - убрать!) */
-	width: 1199px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0;
-	
-	outline: 1px solid black;
 }
 
 .slogan {					/* Слоганы */
 	padding-bottom: 80px;
 	border-bottom: 2px solid #eeeeee;
-	
-	outline: 1px solid blue;
 }
 
 .slogan-item {					/* Каждый слоган */
@@ -354,15 +329,17 @@ a:active .icon-basket {
 }
 
 .slogan-title {					/* Заголовок слогана */
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 18px;
 	line-height: 30px;
+	font-weight: normal;
+	margin: 0;
 	color: #000;
 }
 
 .slogan-item p {					/* Абзац слогана */
-	font-family: 'Roboto Light', sans-serif;
-	font-size: 16px;
+	font-family: 'Roboto Medium', Arial, sans-serif;
+	font-size: 15px;
 	line-height: 22px;
 	color: #283136;
 }
@@ -407,34 +384,28 @@ a:active .icon-basket {
 .content {					/* Контейнер основного контента */
 	padding: 0;
 	margin: 0;
-	
-	outline: 1px solid blue;
 }
 
 .content-column-left {		/* Левая колонка контента */
 	float: left;
-	width: 560px;
-	padding-top: 71px;
+	width: 575px;
+	padding-top: 75px;
 	margin: 0;
-	
-	outline: 1px solid green;
+	font-family: 'Roboto Medium', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
 }
 
-.content-column-left h1 {		/* Заголовок левой колонки */
-	margin: 0;
-	font-family: 'Roboto Medium', sans-serif;
+.content-column-left b {		/* Заголовок левой колонки */
 	font-size: 36px;
 	line-height: 36px;
 	color: #000;
 }
 
 .content-column-left p {			/* Абзац текста левой колонки */
-	font-family: 'Roboto Light', sans-serif;
-	font-size: 16px;
-	line-height: 22px;
-	color: #283136;
 	margin-top: 28px;
-	margin-bottom: 45px;
+	margin-bottom: 48px;
 }
 
 .list {							/* Список неупорядоченный */
@@ -443,17 +414,11 @@ a:active .icon-basket {
 }
 
 .list .subtitle {				/* Подзаголовок списка */
-	font-family:  'Roboto Medium', sans-serif;
-	font-size: 16px;
-	line-height: 22px;
 	text-transform:uppercase;
 	padding-left: 0;
 }
 
 .list li {						/* Элементы списка */
-	font-family:  'Roboto Light', sans-serif;
-	font-size: 16px;
-	line-height: 22px;
 	padding-bottom: 25px;			/* ...Хотя из измерений исходя - 29рх... */
 	list-style: none;
 	padding-left: 37px;
@@ -464,7 +429,7 @@ a:active .icon-basket {
 	padding-bottom: 71px;
 }
 
-.list li:not(:first-child):before {		/* Псевдоэлемент всех элементов списка, кроме последнего */
+.list li:not(:first-child):before {		/* Псевдоэлемент всех элементов списка, кроме первого */
 	content: '';
 	position: absolute;
     top: 9px;
@@ -479,8 +444,10 @@ a:active .icon-basket {
 	width: 240px;
 	padding: 0;
 	margin: 0;
-	
-	outline: 1px solid green;
+	font-family: 'Roboto Medium', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
 }
 
 .picture-logo {				/* Логотип (второй) в правой колонке */
@@ -503,6 +470,8 @@ a:active .icon-basket {
 	line-height: 16px;
 	text-align: center;
 	background-color: #fff;
+	color: #000;
+	text-transform:uppercase;
 }
 
 .caption-logo:after {		/* Псевдоэлемент заголовка строки (горизонтальная полоса) */
@@ -528,8 +497,6 @@ a:active .icon-basket {
 	margin-right: 80px;
 	text-align: center;
 	vertical-align: middle;
-
-	outline: 1px solid red;
 }
 
 .partner-item:last-child {		/* Последний логотип партнера */
@@ -561,31 +528,24 @@ a:active .icon-basket {
 
 .welcome {								/* Дополнительный класс приветствия */
 	display: block;
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 40px;
-	line-height: auto;
+	line-height: 40px;		/* ...хотя указано auto в Фотошопе, но тогда текст сливается строками */
 	color: black;
 	text-transform:uppercase;
 	text-align: center;
 	vertical-align: middle;
 	padding: 0 110px;
-	
-	outline: 1px solid red;
 }
 /* Форма выбора макетов ------------------------------------------ */
 .left-part-form {		/* Контейнер формы выбора макетов (слева) */
 	width: 240px;
 	float: left;
-	
-	outline: 1px solid blue;
 }
 
 .right-part-items {				/* Правая часть контента (сортировка и макеты) */
 	float: right;
 	width: 560px;
-	/*padding-top: 46px;			/* Надо вставить Сортировку и уменьшить паддинг! */
-	
-	outline: 1px solid blue;
 }
 
 .sorter {
@@ -608,35 +568,27 @@ a:active .icon-basket {
 
 .sort-list li {    /* Элементы списка Сортировки */
 	display: inline-block;
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	vertical-align: middle;
 	text-transform: uppercase;
 	padding: 3px 20px;
-	
-	outline: 1px solid pink;
 }
+
 .sort-list li:first-child {	/* Первый элемент сортировки (заголовок) */
 	padding-left: 0;
 }
 
-.sort-list .activity a {		/* Ссылка внутри активного элемента списка сортировки */
-	border: none;
-	/*color: #000;*/
+.sort-list span:active, .sort-list .activity span, .sort-list .activity span:hover {		/* Ссылки при нажатии, внутри активного элемента списка сортировки */
+	border-bottom: none;
 	opacity: 1;
+	cursor: default;
 }
 
-.sort-list a:active,.sort-list .activity a{
-	opacity:1;
-	border:none;
-}
-
-
-.sort-list a {    /* Ссылки в Сортировке */
+.sort-list span {    /* Ссылки в Сортировке */
 	position: relative;
 	display: block;
-	
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
@@ -644,13 +596,14 @@ a:active .icon-basket {
 	border-bottom: 1px dotted #00ca74;
 }
 
-.sort-list a:hover {
+.sort-list span:hover {
 	border-bottom-style: solid;
 	opacity: 1;
 }
 
 .sort-list li h3 {
 	margin: 0;
+	font-size: 12px;
 }
 
 .icon-down-dir, .icon-up-dir {
@@ -670,6 +623,7 @@ a:active .icon-basket {
 
 .sort-up-down .active i {
 	color: #00ca74;
+	cursor: default;
 }
 
 .sort-up-down a:nth-of-type(2) {
@@ -758,10 +712,6 @@ a:active .icon-basket {
 .left-part-form h2:first-child {
 	margin-top: 0;
 }
-
-/*.left-part-form h2:last-child {
-	margin-bottom: 0;
-}*/
 
 .left-part-form input[type="radio"] {		/* Радиокнопки */
 	display: none;
@@ -942,12 +892,12 @@ a:active .icon-basket {
 .price-controls{
     white-space:nowrap;
 }
-/**/
-
 /* Окончание стилей страницы Магазин --------------------------------------------------------------------------------------------- */
+
 /* Пагинатор ----------------------------------------------------- */
 .paginator {
 	/*text-align: center;*/
+	margin-bottom: 79px;
 }
 
 ul.paginator-list {
@@ -967,13 +917,12 @@ ul.paginator-list  li a {
     float: left;
     width: 38px;
 	height: 26px;
-	/*padding: 12px 15px;*/
 	padding-top: 12px;
-	
 	border-radius: 3px;
 	margin-right: 10px;
     text-decoration: none;
 	font-size: 12px;
+	line-height: 18px;
 	vertical-align: middle;
 	text-align: center;
 	text-transform:uppercase;
@@ -1014,37 +963,39 @@ ul.paginator-list li a:active:not(.active) {
 	background: #b5b5b5 url("../img/-index/map.jpg") no-repeat -205px -151px;
 }
 
-.map {
-	/*position: absolute;*/
+.map-box {
+	position: relative;
+	height: 416px;
+	background-color: #b5b5b5;
 }
 
 .map .container {
-	width: 1199px;
-	margin: 0 auto;
-	padding: 0;
-	padding-top: 85px;
+	z-index: 100;
+	
+	outline: 1px solid green;
 }
 
 .map-contacts {
-	position: absolute;				/* ... */
+	position: absolute;
+	box-sizing: border-box;
 	top: 88px;
-	left: 160px;
-	width: 210px;
-	height: 188px;
+	left: 50%; /*160px*/
+	width: 250px;
+	/*height: 188px;*/
 	background-color: #fff;
-	padding: 26px 20px;
-	
-	outline: 1px dashed orange;
+	padding: 26px 23px;
+	margin-left: -440px;
+	z-index: 100;
 }
 
 .map-contacts .head {
-	font-family: 'Roboto Medium', sans-serif;		/* ...какой именно шрифт - неизвестно */
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 16px;
 	line-height: 30px;
 }
 
 .map-contacts p {
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 16px;
 	line-height: 20px;
 	color: #666666;
@@ -1084,8 +1035,6 @@ ul.paginator-list li a:active:not(.active) {
 	padding-top: 77px;
 	padding-bottom: 77px;
 	background: #fff;
-	
-	outline: 1px solid red;	
 }
 
 .main-footer a {						/* Ссылкам социальных кнопок указываем иконочный шрифт */
@@ -1098,20 +1047,15 @@ ul.paginator-list li a:active:not(.active) {
 .footer-social {				/* Группа социальных кнопок */
 	float: left;
 	min-width: 240px;
-	/*margin-right: 80px;*/
-	
-	outline: 1px solid blue;
 }
 
 .footer-text {			/* Текстовый блок футера */
 	float: right;
 	min-width: 560px;
-	
-	outline: 1px solid blue;
 }
 
 .footer-text h2 {
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: normal;
@@ -1120,17 +1064,13 @@ ul.paginator-list li a:active:not(.active) {
 }
 
 .footer-text p {
-	font-family: 'Roboto Light', sans-serif;
-	font-size: 16px;
-	line-height: 22px;
-	font-weight: normal;
+	color: #283136;
 }
 
 .social-btn {						/* Социальные кнопки в футере */
 	margin: 0;
 	display: inline-block;
 	width: 62px;
-	/*height: 62px;*/
 	height: 43px;
 	margin-right: 27px;
 	border-radius: 50%;
@@ -1159,11 +1099,11 @@ ul.paginator-list li a:active:not(.active) {
 
 /* Модальное окно Вход ------------------------------------------ */
 .modal-window {
-	display: block;									/* Написать JS, меняющий значение display с "none" на "block" */
-	position: absolute;					/**/
+	display: none;									/* Написать JS, меняющий значение display с "none" на "block" */
+	position: absolute;
 	left: 50%;
-	top: 50%; 							/**/
-	transform:translate(-50%, -50%);	/**/
+	top: 50%; 							
+	transform:translate(-50%, -50%);	
 	width: 460px;
 	padding: 56px 90px 50px 80px;
 	background-color: #fff;
@@ -1241,7 +1181,6 @@ ul.paginator-list li a:active:not(.active) {
     border: none;
 	outline: none;
 	font-size: 12px;
-	/*margin-bottom: 49px;			/* ...почему-то не работает... */
 }
 
 .login-form .btn:hover {
