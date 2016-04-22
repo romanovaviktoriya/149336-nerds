@@ -37,185 +37,184 @@
 		
 		<!--Основная часть страницы -->
 		<div class="main-container clearfix">
-		<div class="container">
-			<!-- Форма в левой части окна -->
-			<div class="left-part-form">
-				<form action="/echo" method="post">
-					<!-- Блок Стоимость(ползунок) -->
-					<h2>Стоимость:</h2>
-					<div class="range-filter">
-						<div class="range-controls">
-							<div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
-							<div class="toggle min-toggle"></div>
-							<div class="toggle max-toggle"></div>
+			<div class="container">
+				<!-- Форма в левой части окна -->
+				<div class="left-part-form">
+					<form action="/echo" method="post">
+						<!-- Блок Стоимость(ползунок) -->
+						<h2>Стоимость:</h2>
+						<div class="range-filter">
+							<div class="range-controls">
+								<div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
+								<div class="toggle min-toggle"></div>
+								<div class="toggle max-toggle"></div>
+							</div>
+							<div class="price-controls">
+								от <input class="min-price" type="text" value="5 000">
+								до <input class="max-price" type="text" value="15 000">
+							</div>
 						</div>
-						<div class="price-controls">
-							от <input class="min-price" type="text" value="5 000">
-							до <input class="max-price" type="text" value="15 000">
-						</div>
-					</div>
-					
-					<!-- Блок Сетка (радиобаттоны) -->
-					<h2>Сетка:</h2>
-					<input type="radio" name="radiobutton" id="adaptive" checked>
-					<label for="adaptive">Адаптивная</label><br>
-					<input type="radio" name="radiobutton" id="fixed">
-					<label for="fixed">Фиксированная</label><br>
-					<input type="radio" name="radiobutton" id="stretch">
-					<label for="stretch">Резиновая</label><br>
-					
-					<h2>Особенности:</h2>
-					<input type="checkbox" disabled id="check01" name="checkbox" value="" checked>
-					<label for="check01">Слайдер</label><br>
-					<input type="checkbox" id="check02" name="checkbox" value="">
-					<label for="check02">Блок преимуществ</label><br>
-					<input type="checkbox" id="check03" name="checkbox" value="" checked>
-					<label for="check03">Новости</label><br>
-					<input type="checkbox" id="check04" name="checkbox" value="">
-					<label for="check04">Галерея</label><br>
-					<input type="checkbox" id="check05" name="checkbox" value="">
-					<label for="check05">Корзина</label><br>
-					
-					<button type="submit" class="btn">Показать</button>
-				</form>
-			</div>
-			
-			<!-- Основная часть -->
-			<div class="right-part-items">
-				<!-- Блок сортировки -->
-				<div class="sorting clearfix">
-					<div class="sorter">
-						<ul class="sort-list">
-							<li><h3 class="sort-title">Сортировать:</h3></li>
-							<li><span>По цене</span></li>
-							<li><span>По типу</span></li>
-							<li><span>По функционалу</span></li>
-						</ul>
-					</div>
 						
-					<div class="sort-up-down">
-						<a class="active" href="#"><i class="icon-down-dir"></i></a>
-						<a href="#"><i class="icon-up-dir"></i></a>
-					</div>
+						<!-- Блок Сетка (радиобаттоны) -->
+						<h2>Сетка:</h2>
+						<input type="radio" name="radiobutton" id="adaptive" checked>
+						<label for="adaptive">Адаптивная</label><br>
+						<input type="radio" name="radiobutton" id="fixed">
+						<label for="fixed">Фиксированная</label><br>
+						<input type="radio" name="radiobutton" id="stretch">
+						<label for="stretch">Резиновая</label><br>
+						
+						<h2>Особенности:</h2>
+						<input type="checkbox" id="check01" name="checkbox" value="" checked>
+						<label for="check01">Слайдер</label><br>
+						<input type="checkbox" id="check02" name="checkbox" value="">
+						<label for="check02">Блок преимуществ</label><br>
+						<input type="checkbox" id="check03" name="checkbox" value="" checked>
+						<label for="check03">Новости</label><br>
+						<input type="checkbox" id="check04" name="checkbox" value="">
+						<label for="check04">Галерея</label><br>
+						<input type="checkbox" id="check05" name="checkbox" value="">
+						<label for="check05">Корзина</label><br>
+						<button type="submit" class="btn">Показать</button>
+					</form>
 				</div>
 				
-				<!-- Собственно макеты -->
-				<div class="layouts-group clearfix">
-				
-					<section class="layout-item">			<!-- Первый макет -->
-						<div class="browser">			<!-- Кружочки -->
-							<i></i>
-							<i></i>
-							<i></i>
+				<!-- Основная часть -->
+				<div class="right-part-items">
+					<!-- Блок сортировки -->
+					<div class="sorting clearfix">
+						<div class="sorter">
+							<ul class="sort-list">
+								<li><h3 class="sort-title">Сортировать:</h3></li>
+								<li><span>По цене</span></li>
+								<li><span>По типу</span></li>
+								<li><span>По функционалу</span></li>
+							</ul>
 						</div>
-						
-						<div class="layout-buy">		<!-- Всплывающая заставка -->
-							<h2 class="layout-buy-title">Sunset</h2>
-							<p>Интернет-магазин с личным кабинетом</p>		<!-- Эти две строки почему-то разнятся в стайлгайде и каталоге (я взяла из каталога)... -->
-							<a class="btn" href="#">10 000 р.</a>
+							
+						<div class="sort-up-down">
+							<a class="active" href="#"><i class="icon-down-dir"></i></a>
+							<a href="#"><i class="icon-up-dir"></i></a>
 						</div>
-						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-							<img src="img/-store/layout_1.jpg" width="240" height="240" alt="Макет1">
-						</a>
-					</section>
+					</div>
 					
-					<section class="layout-item">			<!-- Второй макет -->
-						<div class="browser">			<!-- Кружочки -->
-							<i></i>
-							<i></i>
-							<i></i>
-						</div>
-						
-						<div class="layout-buy">		<!-- Всплывающая заставка -->
-							<h2 class="layout-buy-title">Sunset</h2>
-							<p>Интернет-магазин с личным кабинетом</p>
-							<a class="btn" href="#">10 000 р.</a>
-						</div>
-						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-							<img src="img/-store/layout_2.jpg" width="240" height="240" alt="Макет2">
-						</a>
-					</section>
+					<!-- Собственно макеты -->
+					<div class="layouts-group clearfix">
 					
-					<section class="layout-item">			<!-- Третий макет -->
-						<div class="browser">			<!-- Кружочки -->
-							<i></i>
-							<i></i>
-							<i></i>
-						</div>
+						<section class="layout-item">			<!-- Первый макет -->
+							<div class="browser">			<!-- Кружочки -->
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							
+							<div class="layout-buy">		<!-- Всплывающая заставка -->
+								<h2 class="layout-buy-title">Sunset</h2>
+								<p>Интернет-магазин с личным кабинетом</p>		<!-- Эти две строки почему-то разнятся в стайлгайде и каталоге (я взяла из каталога)... -->
+								<a class="btn" href="#">10 000 р.</a>
+							</div>
+							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+								<img src="img/-store/layout_1.jpg" width="240" height="240" alt="Макет1">
+							</a>
+						</section>
 						
-						<div class="layout-buy">		<!-- Всплывающая заставка -->
-							<h2 class="layout-buy-title">Sunset</h2>
-							<p>Интернет-магазин с личным кабинетом</p>
-							<a class="btn" href="#">10 000 р.</a>
-						</div>
-						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-							<img src="img/-store/layout_3.jpg" width="240" height="240" alt="Макет3">
-						</a>
-					</section>
-					
-					<section class="layout-item">			<!-- Четвертый макет -->
-						<div class="browser">			<!-- Кружочки -->
-							<i></i>
-							<i></i>
-							<i></i>
-						</div>
+						<section class="layout-item">			<!-- Второй макет -->
+							<div class="browser">			<!-- Кружочки -->
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							
+							<div class="layout-buy">		<!-- Всплывающая заставка -->
+								<h2 class="layout-buy-title">Sunset</h2>
+								<p>Интернет-магазин с личным кабинетом</p>
+								<a class="btn" href="#">10 000 р.</a>
+							</div>
+							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+								<img src="img/-store/layout_2.jpg" width="240" height="240" alt="Макет2">
+							</a>
+						</section>
 						
-						<div class="layout-buy">		<!-- Всплывающая заставка -->
-							<h2 class="layout-buy-title">Sunset</h2>
-							<p>Интернет-магазин с личным кабинетом</p>
-							<a class="btn" href="#">10 000 р.</a>
-						</div>
-						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-							<img src="img/-store/layout_4.jpg" width="240" height="240" alt="Макет4">
-						</a>
-					</section>
-					
-					<section class="layout-item">			<!-- Пятый макет -->
-						<div class="browser">			<!-- Кружочки -->
-							<i></i>
-							<i></i>
-							<i></i>
-						</div>
+						<section class="layout-item">			<!-- Третий макет -->
+							<div class="browser">			<!-- Кружочки -->
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							
+							<div class="layout-buy">		<!-- Всплывающая заставка -->
+								<h2 class="layout-buy-title">Sunset</h2>
+								<p>Интернет-магазин с личным кабинетом</p>
+								<a class="btn" href="#">10 000 р.</a>
+							</div>
+							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+								<img src="img/-store/layout_3.jpg" width="240" height="240" alt="Макет3">
+							</a>
+						</section>
 						
-						<div class="layout-buy">		<!-- Всплывающая заставка -->
-							<h2 class="layout-buy-title">Sunset</h2>
-							<p>Интернет-магазин с личным кабинетом</p>
-							<a class="btn" href="#">10 000 р.</a>
-						</div>
-						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-							<img src="img/-store/layout_5.jpg" width="240" height="240" alt="Макет5">
-						</a>
-					</section>
-					
-					<section class="layout-item">			<!-- Шестой макет -->
-						<div class="browser">			<!-- Кружочки -->
-							<i></i>
-							<i></i>
-							<i></i>
-						</div>
+						<section class="layout-item">			<!-- Четвертый макет -->
+							<div class="browser">			<!-- Кружочки -->
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							
+							<div class="layout-buy">		<!-- Всплывающая заставка -->
+								<h2 class="layout-buy-title">Sunset</h2>
+								<p>Интернет-магазин с личным кабинетом</p>
+								<a class="btn" href="#">10 000 р.</a>
+							</div>
+							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+								<img src="img/-store/layout_4.jpg" width="240" height="240" alt="Макет4">
+							</a>
+						</section>
 						
-						<div class="layout-buy">		<!-- Всплывающая заставка -->
-							<h2 class="layout-buy-title">Sunset</h2>
-							<p>Интернет-магазин с личным кабинетом</p>
-							<a class="btn" href="#">10 000 р.</a>
-						</div>
-						<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-							<img src="img/-store/layout_6.jpg" width="240" height="240" alt="Макет6">
-						</a>
-					</section>
+						<section class="layout-item">			<!-- Пятый макет -->
+							<div class="browser">			<!-- Кружочки -->
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							
+							<div class="layout-buy">		<!-- Всплывающая заставка -->
+								<h2 class="layout-buy-title">Sunset</h2>
+								<p>Интернет-магазин с личным кабинетом</p>
+								<a class="btn" href="#">10 000 р.</a>
+							</div>
+							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+								<img src="img/-store/layout_5.jpg" width="240" height="240" alt="Макет5">
+							</a>
+						</section>
+						
+						<section class="layout-item">			<!-- Шестой макет -->
+							<div class="browser">			<!-- Кружочки -->
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							
+							<div class="layout-buy">		<!-- Всплывающая заставка -->
+								<h2 class="layout-buy-title">Sunset</h2>
+								<p>Интернет-магазин с личным кабинетом</p>
+								<a class="btn" href="#">10 000 р.</a>
+							</div>
+							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
+								<img src="img/-store/layout_6.jpg" width="240" height="240" alt="Макет6">
+							</a>
+						</section>
 
+					</div>
+				</div>
+				
+				<!-- Пагинатор страниц -->
+				<div class="paginator">
+					<ul class="paginator-list">
+						<li><a href="#" class="active">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">Следующая</a></li>
 				</div>
 			</div>
-			
-			<!-- Пагинатор страниц -->
-			<div class="paginator">
-				<ul class="paginator-list">
-					<li><a href="#" class="active">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">Следующая</a></li>
-			</div>
-		</div>
 		
 		
 				<!-- Карта с контактами -->
