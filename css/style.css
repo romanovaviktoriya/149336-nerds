@@ -603,6 +603,7 @@ a:active .icon-basket {
 
 .sort-list li h3 {
 	margin: 0;
+	font-weight: normal;
 	font-size: 12px;
 }
 
@@ -619,6 +620,10 @@ a:active .icon-basket {
 
 .icon-down-dir:active, .icon-up-dir:active {
 	color: #000;
+}
+
+.sort-up-down a {
+	text-decoration: none;
 }
 
 .sort-up-down .active i {
