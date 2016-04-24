@@ -177,6 +177,7 @@ li.active:last-child a::after {			/* Подчеркивание (псевдоэ�
 
 .main-navigation .active a {  /* Активная ссылка меню хедера */
 	position: relative;
+	pointer-events: none;	/* Отменяем события по клику */
 }
 
 .main-navigation .active a:hover {  /* Активная ссылка меню хедера при наведении */
@@ -546,6 +547,7 @@ a:active .icon-basket {
 .right-part-items {				/* Правая часть контента (сортировка и макеты) */
 	float: right;
 	width: 560px;
+	margin-bottom: 79px;
 }
 
 .sorter {
@@ -628,6 +630,7 @@ a:active .icon-basket {
 
 .sort-up-down .active i {
 	color: #00ca74;
+	pointer-events: none;	/* Отменяем события по клику */
 	cursor: default;
 }
 
@@ -640,8 +643,8 @@ a:active .icon-basket {
 	position: relative;
     display: inline-block;
     width: 240px;
-    margin-right: 78px;
-    margin-bottom: 69px;
+    margin-right: 80px;
+    margin-bottom: 80px;
     vertical-align: top;
     border-top: 30px solid rgba(0,0,0,.1);
     border-top-left-radius: 3px;
@@ -903,83 +906,77 @@ a:active .icon-basket {
 
 /* Пагинатор ----------------------------------------------------- */
 .paginator {
-	/*text-align: center;*/
-	margin-bottom: 79px;
+
 }
 
-ul.paginator-list {
+.paginator-list {
 	display: inline-block;
     padding: 0;
     margin: 0;
-	margin-left: 320px;
+	font-size: 0;
+	list-style:none;
 }
 
-ul.paginator-list li {
-	display: inline;
-}
-
-ul.paginator-list  li a {
-	display: block;
-	color: #000;
-    float: left;
-    width: 38px;
-	height: 26px;
-	padding-top: 12px;
-	border-radius: 3px;
+.paginator-list li {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
 	margin-right: 10px;
+	vertical-align: middle;
+}
+.paginator-list .btn {
+	padding: 0;
+}
+.paginator-list a {
+	color: #000;
     text-decoration: none;
 	font-size: 12px;
-	line-height: 18px;
-	vertical-align: middle;
-	text-align: center;
-	text-transform:uppercase;
+	line-height: 38px;
 }
 
-ul.paginator-list  li:last-child a {
-	width: 136px;
+.paginator-list  li:last-child {
+	width: 104px;
 	margin-right: 0;
 }
 
-ul.paginator-list li a.active {
+.paginator-list .active {
 	width: 34px;
-	height: 22px;
+	height: 34px;
 	border: 2px solid #f1f1f1;
     background-color: #fff;
-    color: #000;
 	cursor: default;
+	pointer-events: none;	/* Отменяем события по клику */
 }
 
-ul.paginator-list li a:not(.active) {
+.paginator-list :not(.active) {
 	background-color: #f1f1f1;
 }
 
-ul.paginator-list li a:hover:not(.active) {			/* Супер-селектор (надо применить для ссылок меню)! Для всех НЕ активных ссылок Пагинатора */
+.paginator-list :hover:not(.active) {			/* События при НАВЕДЕНИИ у всех НЕ активных ссылок Пагинатора */
 	background-color: #e5e5e5;
 }
 
-ul.paginator-list li a:active:not(.active) {
+.paginator-list .active a{
+	background: none;
+}
+
+.paginator-list :hover a {
+	background: none;
+}
+
+.paginator-list :active a {
+	background: none;
+}
+
+.paginator-list :active:not(.active) {
 	background-color: #d5d5d5;
 	box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
 }
 /* Карта --------------------------------------------------------- */
-.map-content {
-	position: relative;
-	width: 1199px;
-	height: 416px;
-	margin: 0 auto;
-	background: #b5b5b5 url("../img/-index/map.jpg") no-repeat -205px -151px;
-}
-
 .map-box {
 	position: relative;
 	height: 416px;
 	background-color: #b5b5b5;
-}
-
-.map .container {
-	z-index: 100;
-	
-	outline: 1px solid green;
 }
 
 .map-contacts {
