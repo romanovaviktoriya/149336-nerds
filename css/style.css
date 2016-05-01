@@ -72,9 +72,9 @@ html,body{
 }
 body{
     font-size:16px;
-    font-family: 'Roboto Medium', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
 	line-height: 22px;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
     color:black;
     background:white;
@@ -137,7 +137,6 @@ body{
 
 .main-navigation li {    /* Элементы списка меню хедера */
 	display: inline-block;
-	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 30px;
 	vertical-align: middle;
@@ -236,7 +235,7 @@ a:active .icon-basket {
     height:10px;
     margin-left:-100px;
     text-align:center;
-    z-index:1000;
+    z-index: 99;
 }
 
 .slider-controls label{
@@ -345,16 +344,13 @@ a:active .icon-basket {
 }
 
 .slogan-title {					/* Заголовок слогана */
-	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 18px;
 	line-height: 30px;
-	font-weight: normal;
 	margin: 0;
 	color: #000;
 }
 
 .slogan-item p {					/* Абзац слогана */
-	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 15px;
 	line-height: 22px;
 	color: #283136;
@@ -407,9 +403,6 @@ a:active .icon-basket {
 	width: 575px;
 	padding-top: 75px;
 	margin: 0;
-	font-family: 'Roboto Medium', Arial, sans-serif;
-	font-size: 16px;
-	line-height: 22px;
 	color: #283136;
 }
 
@@ -460,9 +453,6 @@ a:active .icon-basket {
 	width: 240px;
 	padding: 0;
 	margin: 0;
-	font-family: 'Roboto Medium', Arial, sans-serif;
-	font-size: 16px;
-	line-height: 22px;
 	color: #283136;
 }
 
@@ -544,7 +534,6 @@ a:active .icon-basket {
 
 .welcome {								/* Дополнительный класс приветствия */
 	display: block;
-	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 40px;
 	line-height: 40px;		/* ...хотя указано auto в Фотошопе, но тогда текст сливается строками */
 	color: black;
@@ -585,7 +574,6 @@ a:active .icon-basket {
 
 .sort-list li {    /* Элементы списка Сортировки */
 	display: inline-block;
-	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	vertical-align: middle;
@@ -742,8 +730,6 @@ a:active .icon-basket {
 .left-part-form input[type="radio"] + label {
 	display: inline-block;
 	vertical-align: middle;
-	font-family: 'Roboto Medium', Arial, sans-serif;
-	font-size: 16px;
 	line-height: 20px;
 	color: #283136;
 	margin-right: 10px;
@@ -772,8 +758,6 @@ a:active .icon-basket {
 .left-part-form input[type="checkbox"] + label {
 	display: inline-block;
 	vertical-align: middle;
-	font-family: 'Roboto Medium', Arial, sans-serif;
-	font-size: 16px;
 	line-height: 20px;
 	color: #283136;
 	margin-right: 10px;
@@ -806,7 +790,6 @@ a:active .icon-basket {
 .left-part-form .btn{					/* Кнопка в Форме */
     width: 150px;
     margin-top: ;
-	font-family: 'Roboto', Arial, sans-serif;
 	background-color: #f1f1f1;
 	color: #000;
 	outline: none;
@@ -909,7 +892,6 @@ a:active .icon-basket {
     border:none;
     background:#f1f1f1;
     font-size:16px;
-    font-family:'Roboto', sans-serif;
     font-weight:300;
     font-style:normal;
     text-align:center;
@@ -1002,9 +984,8 @@ a:active .icon-basket {
 	position: absolute;
 	box-sizing: border-box;
 	top: 88px;
-	left: 50%; /*160px*/
+	left: 50%;
 	width: 250px;
-	/*height: 188px;*/
 	background-color: #fff;
 	padding: 26px 23px;
 	margin-left: -440px;
@@ -1012,14 +993,10 @@ a:active .icon-basket {
 }
 
 .map-contacts .head {
-	font-family: 'Roboto Medium', Arial, sans-serif;
-	font-size: 16px;
 	line-height: 30px;
 }
 
 .map-contacts p {
-	font-family: 'Roboto Medium', Arial, sans-serif;
-	font-size: 16px;
 	line-height: 20px;
 	color: #666666;
 }
@@ -1045,6 +1022,10 @@ a:active .icon-basket {
 
 .map-contacts .btn:active {			/* Кнопка в контактах на Карте при нажатии */
 	background-color: #b63538;
+}
+
+.map-contacts .open {
+	
 }
 
 .marker img {
@@ -1078,7 +1059,6 @@ a:active .icon-basket {
 }
 
 .footer-text h2 {
-	font-family: 'Roboto Medium', Arial, sans-serif;
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: normal;
@@ -1123,7 +1103,7 @@ a:active .icon-basket {
 /* Модальное окно Вход ------------------------------------------ */
 .modal-window {
 	display: none;									/* Написать JS, меняющий значение display с "none" на "block" */
-	position: absolute;
+	position: fixed;
 	left: 50%;
 	top: 50%; 							
 	transform:translate(-50%, -50%);	
@@ -1132,6 +1112,7 @@ a:active .icon-basket {
 	background-color: #fff;
 	color: #000;
 	box-shadow: 0 20px 40px rgba(0,0,0,.75);
+	z-index: 101;
 }
 
 .modal-window-close {
@@ -1143,6 +1124,69 @@ a:active .icon-basket {
 	height: 41px;
 	background: url("../img/-index/close_window.png") no-repeat center;
 	cursor: pointer;
+}
+
+@keyframes show {			/* Кадры анимации открытия Модального окна */
+ 0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	60% {
+		transform: scale(1.1);	
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}	
+}
+
+.modal-show {		/* Отображение модального окна */
+	display: block;
+	animation: show .5s ease-in-out;	
+}
+
+@keyframes close {			/* Кадры анимации закрытия Модального окна */
+	0% {
+		transform: scale(1);
+		opacity: 1;		
+	}
+	60% {
+		transform: scale(0.9);	
+        opacity: 1;	
+	}
+	80% {
+		transform: scale(1.1);
+	}	
+	100% {
+		transform: scale(0);
+		opacity: 0;	
+	}		
+}
+
+.modal-close{						/* Закрытие модального окна */
+	animation: close .5s ease-in-out;
+}
+
+@keyframes error {			/* Кадры анимации ошибки Модального окна Вход */
+  0% {
+	opacity: 1;
+  }
+  50% {
+	box-shadow:  0 0 20px 30px rgba(255,0,0,0.7),
+				inset 0 0 10px 10px rgba(255,0,0,0.7);
+	opacity: 0.9;
+  }
+  100% {
+	opacity: 1;
+  }
+}
+
+.modal-error {		/* Ошибка входа (не хватает логина и/или пароля) */
+	animation: error 2s;
 }
 
 .login-form .left-part {
@@ -1158,7 +1202,6 @@ a:active .icon-basket {
 	padding: 10px 15px;
 	font-size: 12px;
 	line-height: 18px;
-	font-family: "Roboto Medium", sans-serif;
 	text-transform: uppercase;
 	color: #000;
 	border: 2px solid #d7dcde;
@@ -1175,9 +1218,7 @@ a:active .icon-basket {
 } 
 
 .login-form label {
-	font-size: 16px;
 	line-height: 18px;
-	font-family: "Roboto Medium", sans-serif;
 	color: #000;
 }
 
@@ -1186,7 +1227,6 @@ a:active .icon-basket {
 	padding: 10px 14px;
 	font-size: 12px;
 	line-height: 18px;
-	font-family: "Roboto Medium", sans-serif;
 	text-transform: uppercase;
 	color: #000;
 	border: 2px solid #d7dcde;
