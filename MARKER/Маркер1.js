@@ -1,4 +1,5 @@
-﻿function initMap() {
+﻿
+function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: {lat: 59.9387, lng: 30.3228} 
@@ -13,8 +14,15 @@ var beaches = [
 ];
 
 function setMarkers(map) {
+  // Adds markers to the map.
+
+  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+  // (0,0) is located in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker increase in the X
+  // direction to the right and in the Y direction down.
   var image = {
-    url: '../img/marker_map.png',
+    url: 'marker_map.png',
     // This marker is 182 pixels wide by 190 pixels high.
     size: new google.maps.Size(182, 190),
     // The origin for this image is (0, 0).
@@ -22,7 +30,9 @@ function setMarkers(map) {
     // The anchor for this image is the base of the flagpole at (0, 32).
     anchor: new google.maps.Point(0, 0)
   };
-  
+  // Shapes define the clickable region of the icon. The type defines an HTML
+  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+  // The final coordinate closes the poly by connecting to the first coordinate.
   var shape = {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'

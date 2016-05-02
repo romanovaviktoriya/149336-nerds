@@ -1234,6 +1234,7 @@ a:active .icon-basket {
 	background: #fff;
 	margin-top: 10px;
 	margin-bottom: 48px;
+	resize: none;
 }
 
 .login-form .btn {						/* Кнопка Отправить в модальном окне Напишите нам  */

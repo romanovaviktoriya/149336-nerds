@@ -149,7 +149,11 @@
 			
 			<!-- Карта с контактами -->
 			<div class="map-box">
-				<div id="map" class="map"></div>
+				<div id="map" class="map">
+					<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2223950850346!2d30.321865619127472!3d59.93880789686159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+					4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsd
+					GD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462105639882" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+				</div>
 					<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
 						<div class="head">NЁRDS DESIGN STUDIO</div>
 						<p>191186, Санкт-Петербург,<br>
@@ -193,8 +197,8 @@
 				</div>
 				
 				<div class="right-part">
-					<label for="e-mail">Ваш е-mail:</label><br>
-					<input type="email" name="e-mail" id="e-mail" placeholder="Для отправки ответа" required><br>
+					<label for="email">Ваш е-mail:</label><br>
+					<input type="email" name="email" id="email" placeholder="Для отправки ответа" required><br>
 				</div>
 				
 				<label for="letter">Текст письма:</label><br>
@@ -203,7 +207,10 @@
 			</form>
 		</div>
 		
-		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=y2CGXugQH0MIOYEFrCMbbpvY8io7dJtM&width=100%&height=416&lang=ru_RU&sourceType=constructor&scroll=true&id=map"></script>
+		<!--<script type="text/javascript" charset="utf-8" async src="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9388079,30.3218656,17.5z/data=!4m2!3m1!1s0x4696310fca5ba729:0xea9c53d4493c879f&id=map"></script>
+		-->
+		<script type="text/javascript" charset="utf-8" async src="scr.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8qD5kkL6reLpob9nMyUI7l8KWJrKG2wc&signed_in=true&callback=initMap"></script>
 
 	</body>
 </html>
