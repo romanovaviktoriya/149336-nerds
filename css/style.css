@@ -760,7 +760,6 @@ a:active .icon-basket {
 	vertical-align: middle;
 	line-height: 20px;
 	color: #283136;
-	margin-right: 10px;
 	cursor: pointer;
 	margin-bottom: 20px;
 }
@@ -785,6 +784,7 @@ a:active .icon-basket {
 
 .left-part-form input[type="checkbox"]:checked + label::before {
 	content: '\2611';
+	margin-right: 6px;
 }
 
 .left-part-form .btn{					/* Кнопка в Форме */
