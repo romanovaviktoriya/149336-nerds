@@ -560,9 +560,9 @@ a:active .icon-basket {
 }
 
 .sort-up-down {
-	float: left;
+	float: right;
 	margin-bottom: 22px;
-	margin-left: 60px;
+	margin-left: 70px;
 }
 
 .sorter ul {   /* Список Сортировка */
@@ -600,7 +600,7 @@ a:active .icon-basket {
 	opacity: 1;
 }
 
-.sort-list span:active {		/* Ссылки при нажатии, внутри активного элемента списка сортировки */
+.sort-list span:active {		/* Ссылки при нажатии внутри списка сортировки */
 	border-bottom-style: none;
 	opacity: 1;
 }
@@ -616,6 +616,11 @@ a:active .icon-basket {
 	font-size: 23px;
 	line-height: 20px;
 	color: #c1c1c1;
+}
+
+.icon-down-dir:before, .icon-up-dir:before {
+	width: 11px;
+	margin: 0;
 }
 
 .icon-down-dir:hover, .icon-up-dir:hover {
@@ -634,11 +639,6 @@ a:active .icon-basket {
 	color: #00ca74;
 	pointer-events: none;	/* Отменяем события по клику */
 	cursor: default;
-}
-
-.sort-up-down a:nth-of-type(2) {
-	margin-left: -15px;
-	margin-right: -17px;
 }
 
 .layout-item {
