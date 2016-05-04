@@ -585,12 +585,6 @@ a:active .icon-basket {
 	padding-left: 0;
 }
 
-.sort-list span:active, .sort-list .activity span, .sort-list .activity span:hover {		/* Ссылки при нажатии, внутри активного элемента списка сортировки */
-	border-bottom: none;
-	opacity: 1;
-	cursor: default;
-}
-
 .sort-list span {    /* Ссылки в Сортировке */
 	position: relative;
 	display: block;
@@ -603,6 +597,11 @@ a:active .icon-basket {
 
 .sort-list span:hover {
 	border-bottom-style: solid;
+	opacity: 1;
+}
+
+.sort-list span:active {		/* Ссылки при нажатии, внутри активного элемента списка сортировки */
+	border-bottom-style: none;
 	opacity: 1;
 }
 
