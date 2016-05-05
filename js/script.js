@@ -60,7 +60,7 @@ var beaches = [
 
 function setMarkers(map) {
   var image = {
-    url: 'img/-index/marker_map.png',
+    url: 'img/marker_map.png',
     // This marker is 182 pixels wide by 190 pixels high.
     size: new google.maps.Size(182, 190),
     // The origin for this image is (0, 0).

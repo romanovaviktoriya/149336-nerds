@@ -284,19 +284,19 @@ a:active .icon-basket {
 }
 
 .slide:nth-child(1){
-    background-image:url("../img/-index/slider_bg.png");
+    background-image:url("../img/slider_bg.png");
     background-repeat:no-repeat;
     background-position:100% 10px;
 }
 
 .slide:nth-child(2){
-    background-image:url("../img/-index/slider_bg_2.png");
+    background-image:url("../img/slider_bg_2.png");
     background-repeat:no-repeat;
     background-position:100% 10px;
 }
 
 .slide:nth-child(3){
-    background-image:url("../img/-index/slider_bg_3.png");
+    background-image:url("../img/slider_bg_3.png");
     background-repeat:no-repeat;
     background-position:100% 0;
 }
@@ -1126,7 +1126,7 @@ a:active .icon-basket {
 	right: 6px;
 	width: 41px;
 	height: 41px;
-	background: url("../img/-index/close_window.png") no-repeat center;
+	background: url("../img/close_window.png") no-repeat center;
 	cursor: pointer;
 }
 
