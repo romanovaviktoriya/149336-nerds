@@ -50,15 +50,6 @@ function initMap() {
     center: {lat: 59.9387, lng: 30.3228} 
   });
 
-  setMarkers(map);
-}
-
-// Data for the markers consisting of a name, a LatLng and a zIndex for the
-var beaches = [
-  ['Bondi Beach', 59.9387977, 30.3228048, 1],
-];
-
-function setMarkers(map) {
   var image = {
     url: 'img/marker_map.png',
     // This marker is 182 pixels wide by 190 pixels high.
@@ -67,21 +58,10 @@ function setMarkers(map) {
     origin: new google.maps.Point(0, 0),
     // The anchor for this image is the base of the flagpole at (30, 180).
     anchor: new google.maps.Point(30, 180)
-  };
-  
-  var shape = {
-    coords: [1, 1, 1, 20, 18, 20, 18, 1],
-    type: 'poly'
-  };
-  for (var i = 0; i < beaches.length; i++) {
-    var beach = beaches[i];
-    var marker = new google.maps.Marker({
-      position: {lat: beach[1], lng: beach[2]},
-      map: map,
-      icon: image,
-      shape: shape,
-      title: beach[0],
-      zIndex: beach[3]
-    });
-  }
 }
+var marker = new google.maps.Marker({
+      position: {lat: 59.9387977, lng: 30.3228048},
+      map: map,
+      icon: image
+	  });
+  }

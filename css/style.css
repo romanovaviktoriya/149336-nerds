@@ -777,7 +777,7 @@ a:active .icon-basket {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
-	font-size: 28px;
+	font-size: 1em;
 	color: #c1c1c1;
 }
 
@@ -788,7 +788,7 @@ a:active .icon-basket {
 
 .left-part-form .btn{					/* Кнопка в Форме */
     width: 150px;
-    margin-top: ;
+    margin-top: 40px;
 	background-color: #f1f1f1;
 	color: #000;
 	outline: none;
