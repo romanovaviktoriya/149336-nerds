@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/styleem.css" type="text/css">
 	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,100,300&subset=latin,cyrillic' type='text/css'>
     <title>Nerd's</title>
   </head>
@@ -14,18 +14,18 @@
 			<div class="container clearfix">
 				
 				<div class="logo">
-					<a href="#"><img src="img/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
+					<a href="index.html"><img src="img/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
 				</div>
-					
-				<nav class="main-navigation">
-					<ul>
-						<li class="active"><a href="index.html">Студия</a></li>
+				<nav class="main-navigation menu">
+					<ul  class="lists">
+						<li class="current-item active"><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
 						<li><a href="store.html">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
 						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
 					</ul>
-				</nav>
+					<a class="toggle-nav hide-show" href="#">&#9776;</a>
+				</nav>	
 			</div> 
 			
 			<div class="container clearfix">	
@@ -152,14 +152,17 @@
 			<div class="map-box">
 				<div id="map" class="map">
 				</div>
-				<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
-					<div class="head">NЁRDS DESIGN STUDIO</div>
-					<p>191186, Санкт-Петербург,<br>
-					ул. Б.Конюшенная, д. 19/8<br>
-					<br>
-					тел. +7(812) 275-75-75</p>					
-					<a class="btn login" href="#">Напишите нам</a>
-				</div>
+			</div>
+				
+		</div>
+		<div class="container">
+			<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
+				<div class="head">NЁRDS DESIGN STUDIO</div>
+				<p>191186, Санкт-Петербург,<br>
+				ул. Б.Конюшенная, д. 19/8<br>
+				<br>
+				тел. +7(812) 275-75-75</p>					
+				<a class="btn login" href="feedback.html">Напишите нам</a>
 			</div>
 		</div>
 		
@@ -199,7 +202,7 @@
 				</div>
 				
 				<label for="letter">Текст письма:</label><br>
-				<textarea name="letter" id="letter" cols="56" rows="4" placeholder="В свободной форме" required=""></textarea>
+				<textarea name="letter" id="letter" cols="28" rows="4" placeholder="В свободной форме" required=""></textarea>
 				<button type="submit" class="btn">Отправить</button>
 			</form>
 		</div>

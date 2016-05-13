@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/styleem.css" type="text/css">
 	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,100,300&subset=latin,cyrillic' type='text/css'>
     <title>Магазин Nerd's</title>
   </head>
@@ -11,21 +11,23 @@
 		<!--Хедер страницы -->
 		<header class="main-header">
 			<div class="container clearfix">
-				<!-- Логотип -->
+				
 				<div class="logo">
-					<a href="#"><img src="img/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
+					<a href="index.html"><img src="img/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
 				</div>
-				<!-- Навигация -->	
-				<nav class="main-navigation">
-					<ul>
+				
+				<nav class="main-navigation menu">
+					<ul  class="lists">
 						<li><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
-						<li class="active"><a href="store.html">Магазин</a></li>
+						<li class="current-item active"><a href="store.html">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
 						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
 					</ul>
-				</nav>
+					<a class="toggle-nav hide-show" href="#">&#9776;</a>
+				</nav>	
 			</div> 
+			
 			
 			<div class="container welcome clearfix">	
 				<!-- Приветствие магазина -->
@@ -106,13 +108,13 @@
 							</div>
 							
 							<div class="layout-buy">		<!-- Всплывающая заставка -->
-								<h2 class="layout-buy-title">Sunset</h2>
+								<a class="name" href="#">					<!-- Название макета, являющееся ссылкой -->
+									<h2 class="layout-buy-title">Sunset</h2>
+								</a>
 								<p>Интернет-магазин с личным кабинетом</p>		<!-- Эти две строки почему-то разнятся в стайлгайде и каталоге (я взяла из каталога)... -->
 								<a class="btn" href="#">10 000 р.</a>
 							</div>
-							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-								<img src="img/layout_1.jpg" width="240" height="240" alt="Макет1">
-							</a>
+							<img src="img/layout_1.jpg" width="240" height="240" alt="Макет1">
 						</section>
 						
 						<section class="layout-item">			<!-- Второй макет -->
@@ -123,13 +125,13 @@
 							</div>
 							
 							<div class="layout-buy">		<!-- Всплывающая заставка -->
-								<h2 class="layout-buy-title">Sunset</h2>
+								<a class="name" href="#">					<!-- Название макета, являющееся ссылкой -->
+									<h2 class="layout-buy-title">Sunset</h2>
+								</a>
 								<p>Интернет-магазин с личным кабинетом</p>
 								<a class="btn" href="#">10 000 р.</a>
 							</div>
-							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-								<img src="img/layout_2.jpg" width="240" height="240" alt="Макет2">
-							</a>
+							<img src="img/layout_2.jpg" width="240" height="240" alt="Макет2">
 						</section>
 						
 						<section class="layout-item">			<!-- Третий макет -->
@@ -140,13 +142,13 @@
 							</div>
 							
 							<div class="layout-buy">		<!-- Всплывающая заставка -->
-								<h2 class="layout-buy-title">Sunset</h2>
+								<a class="name" href="#">					<!-- Название макета, являющееся ссылкой -->
+									<h2 class="layout-buy-title">Sunset</h2>
+								</a>
 								<p>Интернет-магазин с личным кабинетом</p>
 								<a class="btn" href="#">10 000 р.</a>
 							</div>
-							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-								<img src="img/layout_3.jpg" width="240" height="240" alt="Макет3">
-							</a>
+							<img src="img/layout_3.jpg" width="240" height="240" alt="Макет3">
 						</section>
 						
 						<section class="layout-item">			<!-- Четвертый макет -->
@@ -157,13 +159,13 @@
 							</div>
 							
 							<div class="layout-buy">		<!-- Всплывающая заставка -->
-								<h2 class="layout-buy-title">Sunset</h2>
+								<a class="name" href="#">					<!-- Название макета, являющееся ссылкой -->
+									<h2 class="layout-buy-title">Sunset</h2>
+								</a>
 								<p>Интернет-магазин с личным кабинетом</p>
 								<a class="btn" href="#">10 000 р.</a>
 							</div>
-							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-								<img src="img/layout_4.jpg" width="240" height="240" alt="Макет4">
-							</a>
+							<img src="img/layout_4.jpg" width="240" height="240" alt="Макет4">
 						</section>
 						
 						<section class="layout-item">			<!-- Пятый макет -->
@@ -174,13 +176,13 @@
 							</div>
 							
 							<div class="layout-buy">		<!-- Всплывающая заставка -->
-								<h2 class="layout-buy-title">Sunset</h2>
+								<a class="name" href="#">					<!-- Название макета, являющееся ссылкой -->
+									<h2 class="layout-buy-title">Sunset</h2>
+								</a>
 								<p>Интернет-магазин с личным кабинетом</p>
 								<a class="btn" href="#">10 000 р.</a>
 							</div>
-							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-								<img src="img/layout_5.jpg" width="240" height="240" alt="Макет5">
-							</a>
+							<img src="img/layout_5.jpg" width="240" height="240" alt="Макет5">
 						</section>
 						
 						<section class="layout-item">			<!-- Шестой макет -->
@@ -191,13 +193,13 @@
 							</div>
 							
 							<div class="layout-buy">		<!-- Всплывающая заставка -->
-								<h2 class="layout-buy-title">Sunset</h2>
+								<a class="name" href="#">					<!-- Название макета, являющееся ссылкой -->
+									<h2 class="layout-buy-title">Sunset</h2>
+								</a>
 								<p>Интернет-магазин с личным кабинетом</p>
 								<a class="btn" href="#">10 000 р.</a>
 							</div>
-							<a href="#">					<!-- Само изображение макета, являющееся ссылкой -->
-								<img src="img/layout_6.jpg" width="240" height="240" alt="Макет6">
-							</a>
+							<img src="img/layout_6.jpg" width="240" height="240" alt="Макет6">
 						</section>
 					</div>
 				
@@ -212,22 +214,23 @@
 					</div>
 				</div>
 			</div>
-		
-		
-				<!-- Карта с контактами -->
-				<div class="map-box">
-					<div id="map" class="map">		<!-- Контейнер карты -->
-					</div>
-					
-					<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
-						<div class="head">NЁRDS DESIGN STUDIO</div>
-						<p>191186, Санкт-Петербург,<br>
-						ул. Б.Конюшенная, д. 19/8<br>
-						<br>
-						тел. +7(812) 275-75-75</p>					
-						<a class="btn login" href="#">Напишите нам</a>
-					</div>	
+			
+			<!-- Карта с контактами -->
+			<div class="map-box">
+				<div id="map" class="map">
 				</div>
+			</div>
+				
+		</div>
+		<div class="container">
+			<div class="map-contacts">		<!-- Контакты с кнопкой обратной связи -->
+				<div class="head">NЁRDS DESIGN STUDIO</div>
+				<p>191186, Санкт-Петербург,<br>
+				ул. Б.Конюшенная, д. 19/8<br>
+				<br>
+				тел. +7(812) 275-75-75</p>					
+				<a class="btn login" href="feedback.html">Напишите нам</a>
+			</div>
 		</div>
 		
 		<!--Футер страницы -->

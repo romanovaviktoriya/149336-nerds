@@ -65,3 +65,15 @@ var marker = new google.maps.Marker({
       icon: image
 	  });
   }
+//---------------------------------------------------------------------------------------------------
+
+/*	var toggle = document.querySelector(".toggle-nav");			
+	var list = document.querySelector(".lists");
+    
+
+	toggle.addEventListener("click", function(event) {	
+	event.preventDefault();								
+	toggle.classList.toggle("hide-show");					
+	list.classList.toggle("hide-show");
+	});
+	*/
