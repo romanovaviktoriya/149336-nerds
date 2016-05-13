@@ -1637,4 +1637,7 @@ a:active .icon-basket {
 			.main-footer {
 				margin-top: 0;
 			}
+			.catalog .container:nth-child(2) {
+				font-size: 3em;
+			}
 		}
