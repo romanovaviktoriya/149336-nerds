@@ -17,6 +17,7 @@
 					<a href="index.html"><img src="img/logo.png" width="139" height="56" alt="Студия Nerd's"></a>
 				</div>
 				<nav class="main-navigation menu">
+					<a class="toggle-nav hide-show" href="#">&#9776;</a>
 					<ul  class="lists">
 						<li class="current-item active"><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
@@ -24,7 +25,6 @@
 						<li><a href="#">Контакты</a></li>
 						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
 					</ul>
-					<a class="toggle-nav hide-show" href="#">&#9776;</a>
 				</nav>	
 			</div> 
 			
@@ -184,32 +184,34 @@
 		
 		<!-- Всплывающее модальное окно Напишите нам-->
 		<div class="modal-window">
-			<!-- Кнопка Закрыть -->
-			<div class="modal-window-close">
-				закрыть
+			<div class="wrapper">
+				<!-- Кнопка Закрыть -->
+				<div class="modal-window-close">
+					закрыть
+				</div>
+				
+				<!-- Форма обратной связи -->
+				<form class="login-form clearfix" action="/echo" method="post">
+					<div class="left-part">
+						<label for="name">Ваше имя:</label>
+						<input type="text" name="login" id="name" placeholder="Представьтесь, пожалуйста" required>
+					</div>
+					
+					<div class="right-part">
+						<label for="email">Ваш е-mail:</label>
+						<input type="email" name="email" id="email" placeholder="Для отправки ответа" required><br>
+					</div>
+					
+					<label for="letter">Текст письма:</label>
+					<textarea name="letter" id="letter" cols="28" rows="4" placeholder="В свободной форме" required=""></textarea>
+					<button type="submit" class="btn">Отправить</button>
+				</form>
 			</div>
-			
-			<!-- Форма обратной связи -->
-			<form class="login-form" action="/echo" method="post">
-				<div class="left-part">
-					<label for="name">Ваше имя:</label><br>
-					<input type="text" name="login" id="name" placeholder="Представьтесь, пожалуйста" required>
-				</div>
-				
-				<div class="right-part">
-					<label for="email">Ваш е-mail:</label><br>
-					<input type="email" name="email" id="email" placeholder="Для отправки ответа" required><br>
-				</div>
-				
-				<label for="letter">Текст письма:</label><br>
-				<textarea name="letter" id="letter" cols="28" rows="4" placeholder="В свободной форме" required=""></textarea>
-				<button type="submit" class="btn">Отправить</button>
-			</form>
 		</div>
 		
 		<!-- Подключение скриптов -->
 		<script type="text/javascript" charset="utf-8" async src="js/script.min.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8qD5kkL6reLpob9nMyUI7l8KWJrKG2wc&callback=initMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
 
 	</body>
 </html>

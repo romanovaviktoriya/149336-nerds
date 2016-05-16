@@ -1,4 +1,4 @@
-﻿/* Подключение иконочного шрифта --------------------------------- */
+/* Подключение иконочного шрифта --------------------------------- */
 @charset "UTF-8";
 
  @font-face {
@@ -98,7 +98,7 @@ body{
     display:block;
     padding:12px 0;
     font-size: 1.2em; /* 12px */
-	line-height: 1.83em; /* 22px */ 
+	line-height: 1.5em; /* 18px */ 
     color:white;
     text-transform:uppercase;
     text-align:center;
@@ -123,8 +123,6 @@ body{
 	float: right;
 	max-width: calc(100% - 149px); /*64%; /*520px;		/* ... 580рх, но тогда остается лишнее место после Корзины... */
 	margin-top: 48px;
-	/*font-size: 1.6em; /* 16px */
-   /* line-height: 2em; /* 32px */
 }
 
 .logo {          /* Логотип */
@@ -146,7 +144,6 @@ body{
 	font-size: 14px; /* 1.4em */
 	line-height: 30px; /* 2.14em */
 	vertical-align: middle;
-	/*margin-right: -4px;	/* борьба с пробелами в инлайн-блоках! */
 }
 
 .main-navigation a {    /* Ссылки в меню хедера */
@@ -156,13 +153,14 @@ body{
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
+	text-transform: uppercase;
 }
 
 .main-navigation .hide-show {	/* Гамбургер спрятан */
 	display:none;
 }
 
-.main-navigation:hover ul.lists {
+.main-navigation .toggle-nav:hover + .lists , .main-navigation  > .lists:hover {
 	display: block;
 }
 
@@ -295,6 +293,9 @@ a:active .icon-basket {
     font-size: 3.6em; /* 36px */
     line-height: 1em; /* 36px */
     color:black;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 27px;
 }
 
 .slide-text p {
@@ -306,6 +307,7 @@ a:active .icon-basket {
     width:240px;
     padding:10px 0;
     margin-top:25px;
+	line-height: 1.5em;
 }
 
 .slide:nth-child(1){
@@ -358,11 +360,11 @@ a:active .icon-basket {
 .slogan-item {					/* Каждый слоган */
 	float: left;
 	width: 240px;
-	margin-right: 80px;
 }
 
-.slogan-item:nth-child(3) {		/* Последний слоган */
-	margin-right: 0;
+.slogan-item:nth-child(2) {		/* Последний слоган */
+	margin-left: calc((100% - 720px)/2);
+	margin-right: calc((100% - 720px)/2);
 }
 
 .slogan-item img {				/* Изображения слоганов */
@@ -372,6 +374,7 @@ a:active .icon-basket {
 .slogan-title {					/* Заголовок слогана */
 	font-size: 1.8em;	/* 18px */
 	line-height: 1.66em;	/* 30px */
+	font-weight: 500;
 	margin: 0;
 	color: #000;
 }
@@ -427,7 +430,8 @@ a:active .icon-basket {
 
 .content-column-left {		/* Левая колонка контента */
 	float: left;
-	width: 575px;
+	max-width: 575px;
+	width: 65.34%;
 	padding-top: 69px;
 	margin: 0;
 	color: #283136;
@@ -436,6 +440,7 @@ a:active .icon-basket {
 .content-column-left b {		/* Заголовок левой колонки */
 	font-size: 3.6em;	/* 36px */
 	line-height: 1em;	/* 36px */
+	font-weight: 500;
 	color: #000;
 }
 
@@ -507,6 +512,7 @@ a:active .icon-basket {
 	padding: 0 15px;
 	font-size: 1em;	/* 16px */
 	line-height: 1em;	/* 16px */
+	font-weight: 500;
 	text-align: center;
 	background-color: #fff;
 	color: #000;
@@ -526,6 +532,7 @@ a:active .icon-basket {
 .partners {					/* Блок логотипов */
 	width: 100%;
 	height: 166px;	
+	font-size: 0;
 	border-top: 2px solid #eee;
 	border-bottom: 2px solid #eee;
 }
@@ -584,18 +591,29 @@ a:active .icon-basket {
 	line-height: 1.375em;
 }
 
+.catalog .group-inputs {
+	border: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 32px;
+	font-size: 1.125em;
+	line-height: 1.67em;
+}
+
+.catalog .group-inputs:nth-of-type(2) {
+	margin-top: 55px;
+}
+
 .right-part-items {				/* Правая часть контента (сортировка и макеты) */
 	float: right;
-	/*min-width: 470px;*/
 	max-width: 560px;
+	width: calc(100% - 250px);
 	margin-bottom: 79px;
 }
 
 .sorting {
 	width: 100%;
 	max-width: ;
-	/*font-size: 1.6em;
-	line-height: 1.375em;*/
 }
 
 .sorter {
@@ -606,8 +624,6 @@ a:active .icon-basket {
 .sort-up-down {
 	float: right;
 	margin-bottom: 22px;
-	margin-left: 70px;
-	
 	font-size: 1.6em;
 	line-height: 1.375em;
 }
@@ -626,7 +642,6 @@ a:active .icon-basket {
 	vertical-align: middle;
 	text-transform: uppercase;
 	padding: 3px 20px;
-	/*margin-right: -4px;	/* борьба с пробелами в инлайн-блоках! */
 }
 
 .sort-list li:first-child {	/* Первый элемент сортировки (заголовок) */
@@ -693,7 +708,6 @@ a:active .icon-basket {
 	position: relative;
     display: inline-block;
     width: 240px;
-    margin-right: 80px;
     margin-bottom: 80px;
     vertical-align: top;
     border-top: 30px solid rgba(0,0,0,.1);
@@ -765,16 +779,22 @@ a:active .icon-basket {
 	font-size: 12px;	/*  */
     line-height: 22px;	/*  */
 }
-.layout-item:nth-of-type(2n) {
-	margin-right: 0;
+.layout-item:nth-of-type(2n+1) {
+	margin-right: calc(100% - 480px);
 }
 
 .left-part-form h2 {
-	margin-top: 47px;
 	margin-bottom: 17px;
 	font-weight: normal;
+	font-size: 1.125em;
+	line-height: 1.67em;
+	text-transform: uppercase;
 }
-
+.group-inputs legend {
+	margin-top: 46px;
+	margin-bottom: -15px;
+	text-transform: uppercase;
+}
 .left-part-form h2:first-child {
 	margin-top: 0;
 }
@@ -786,11 +806,12 @@ a:active .icon-basket {
 .left-part-form input[type="radio"] + label {
 	display: inline-block;
 	vertical-align: middle;
+	font-size: 0.89em;	/* 16px */
 	line-height: 1.25em;		/* 20px */
 	color: #283136;
-	margin-right: 10px;
 	cursor: pointer;
 	margin-bottom: 20px;
+	padding-right: 10px;
 }
 
 .left-part-form input[type="radio"] + label::before {
@@ -814,10 +835,12 @@ a:active .icon-basket {
 .left-part-form input[type="checkbox"] + label {
 	display: inline-block;
 	vertical-align: middle;
+	font-size: 0.89em;	/* 16px */
 	line-height: 1.25em;	/* 20px */
 	color: #283136;
 	cursor: pointer;
 	margin-bottom: 20px;
+	padding-right: 25px;
 }
 
 .left-part-form input[type="checkbox"] + label:last-child {		/* ... */
@@ -845,9 +868,9 @@ a:active .icon-basket {
 
 .left-part-form .btn{					/* Кнопка в Форме */
     width: 150px;
-    margin-top: 40px;
+    margin-top: 46px;
 	font-size: 0.75em;
-	line-height: 1.83em;
+	line-height: 1.5em;
 	background-color: #f1f1f1;
 	color: #000;
 	outline: none;
@@ -963,6 +986,7 @@ a:active .icon-basket {
 
 .price-controls{
     white-space:nowrap;
+	margin-bottom: 46px;
 }
 /* Окончание стилей страницы Магазин --------------------------------------------------------------------------------------------- */
 
@@ -1050,7 +1074,7 @@ a:active .icon-basket {
 }
 
 .map-contacts {
-	position: relative; /*absolute;*/
+	position: relative;
 	box-sizing: border-box;
 	bottom: 328px;	/*top: 88px;*/
 	left: 50%;
@@ -1141,7 +1165,7 @@ a:active .icon-basket {
 .footer-text h2 {
 	font-size: 2.25em;	/* 36px */
 	line-height: 1em;	/* 36px */
-	font-weight: normal;
+	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: 20px;
 }
@@ -1186,7 +1210,13 @@ a:active .icon-basket {
 	position: fixed;
 	left: 50%;
 	top: 50%; 							
-	transform:translate(-50%, -50%);	
+	z-index: 101;
+}
+
+.wrapper {
+	-webkit-transform:translate(-50%, -50%);
+	    -ms-transform:translate(-50%, -50%);
+	        transform:translate(-50%, -50%);	
 	width: 460px;
 	padding: 56px 90px 50px 80px;
 	background-color: #fff;
@@ -1206,6 +1236,21 @@ a:active .icon-basket {
 	cursor: pointer;
 }
 
+@-webkit-keyframes show {			/* Кадры анимации открытия Модального окна */
+  0% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes show {			/* Кадры анимации открытия Модального окна */
   0% {
     opacity: 0.2;
@@ -1223,29 +1268,72 @@ a:active .icon-basket {
 
 .modal-show {		/* Отображение модального окна */
 	display: block;
-	animation: show 1s;
+	-webkit-animation: show 1s;
+	        animation: show 1s;
+	width: calc(100% - 20px);
+}
+
+@-webkit-keyframes close {			/* Кадры анимации закрытия Модального окна */
+	0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+		opacity: 1;		
+	}
+	60% {
+		-webkit-transform: scale(0.9);
+		        transform: scale(0.9);	
+        opacity: 1;	
+	}
+	80% {
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
+	}	
+	100% {
+		-webkit-transform: scale(0);
+		        transform: scale(0);
+		opacity: 0;	
+	}		
 }
 
 @keyframes close {			/* Кадры анимации закрытия Модального окна */
 	0% {
-		transform: scale(1);
+		-webkit-transform: scale(1);
+		        transform: scale(1);
 		opacity: 1;		
 	}
 	60% {
-		transform: scale(0.9);	
+		-webkit-transform: scale(0.9);
+		        transform: scale(0.9);	
         opacity: 1;	
 	}
 	80% {
-		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
 	}	
 	100% {
-		transform: scale(0);
+		-webkit-transform: scale(0);
+		        transform: scale(0);
 		opacity: 0;	
 	}		
 }
 
 .modal-close{						/* Закрытие модального окна */
-	animation: close .5s ease-in-out;
+	-webkit-animation: close .5s ease-in-out;
+	        animation: close .5s ease-in-out;
+}
+
+@-webkit-keyframes error {			/* Кадры анимации ошибки Модального окна Вход */
+  0% {
+	opacity: 1;
+  }
+  50% {
+	box-shadow:  0 0 20px 30px rgba(255,0,0,0.7),
+				inset 0 0 10px 10px rgba(255,0,0,0.7);
+	opacity: 0.9;
+  }
+  100% {
+	opacity: 1;
+  }
 }
 
 @keyframes error {			/* Кадры анимации ошибки Модального окна Вход */
@@ -1263,7 +1351,8 @@ a:active .icon-basket {
 }
 
 .modal-error {		/* Ошибка входа (не хватает логина и/или пароля) */
-	animation: error 2s;
+	-webkit-animation: error 2s;
+	        animation: error 2s;
 }
 
 .login-form {
@@ -1273,6 +1362,15 @@ a:active .icon-basket {
 .login-form .left-part {
 	float: left;
 	margin-right: 20px;
+	max-width: 220px;
+}
+
+.login-form label {
+	display: inline-block;
+	min-width: 220px;
+	font-size: 1.6em;
+	line-height: 1.125em;	/* 18px */
+	color: #000;
 }
 
 .login-form input[type="text"], .login-form input[type="email"] {
@@ -1283,10 +1381,11 @@ a:active .icon-basket {
 	margin-bottom: 20px;
 	padding: 10px 15px;
 	font-size: 1.2em;	/* 12px */
-	line-height: 1.8em;	/* 18px */
+	line-height: 1.5em;	/* 18px */
 	text-transform: uppercase;
 	color: #000;
 	border: 2px solid #d7dcde;
+	border-radius: 2px;
 	outline: none;
 	background: #fff;
 }
@@ -1299,21 +1398,17 @@ a:active .icon-basket {
 	border-color: #56bffb;
 } 
 
-.login-form label {
-	line-height: 1.8em;	/* 18px */
-	color: #000;
-}
-
 .login-form textarea {
 	max-width: 460px;
 	width: 100%;
 	box-sizing: border-box;
 	padding: 10px 14px;
 	font-size: 1.2em;	/* 12px */
-	line-height: 1.8em;	/* 18px */
+	line-height: 1.5em;	/* 18px */
 	text-transform: uppercase;
 	color: #000;
 	border: 2px solid #d7dcde;
+	border-radius: 2px;
 	outline: none;
 	background: #fff;
 	margin-top: 10px;
@@ -1330,6 +1425,8 @@ a:active .icon-basket {
     border: none;
 	outline: none;
 	font-size: 1.2em;	/* 12px */
+	line-height: 1.5em; /*18px */
+	border-radius: 2px;
 }
 
 .login-form .btn:hover {
@@ -1345,7 +1442,6 @@ a:active .icon-basket {
 			.lists {
 				box-sizing: border-box;
 			}
-
 			.main-navigation .lists {
 				display:block;
 			}
@@ -1355,8 +1451,9 @@ a:active .icon-basket {
 			.slide-text .btn {
 				width: 70%;
 			}
-			.slogan-item {
-				margin: 0 auto;
+			.slogan-item:nth-child(2) {		/* Последний слоган */
+				margin-left: calc((100% - 720px)/2);
+				margin-right: calc((100% - 720px)/2);
 			}
 			.slogan-item:first-of-type {
 				float: left;
@@ -1364,18 +1461,12 @@ a:active .icon-basket {
 			.slogan-item:last-of-type {
 				float: right;
 			}
-			.slogan-item:nth-of-type(2) {
-				margin-left: calc((100% - 720px)/2);
-				margin-right: calc((100% - 720px)/2);
-			}
-			
 			.content-column-left {
-				width: 70%;
+				width: 65%;
 			}
 			.content-column-right {
 				width: 30%;
 			}
-			
 			.partner-item {
 				margin-right: 0;
 			}
@@ -1383,15 +1474,12 @@ a:active .icon-basket {
 				margin-left: calc((100% - 732px)/2);
 				margin-right: calc((100% - 732px)/2);
 			}
-
 			.footer-text {
 				width: 65%;
 			}
-		
 			.right-part-items {
 				width: calc(100% - 250px);
 			}
-			
 			.sort-list li {
 				padding-right: 10px;
 			}
@@ -1435,6 +1523,9 @@ a:active .icon-basket {
 				background-size: 200px;
 				text-align: center;
 			}
+			.slide:nth-child(2) {
+				background-size: 170px;
+			}
 			.slide:nth-child(1), .slide:nth-child(2), .slide:nth-child(3) {
 				background-position: 50% 0%;
 			}
@@ -1456,7 +1547,6 @@ a:active .icon-basket {
 			.catalog .container:nth-child(2) {
 				padding-top: 100px;
 				width: 100%;
-				/*height: 138px;*/
 			}
 			.slogan-item {
 				float: none;
@@ -1465,9 +1555,11 @@ a:active .icon-basket {
 				margin: 0 auto;
 				margin-bottom: 20px;
 			}
-			.slogan-item:last-of-type {
-				margin: 0 auto;
+			.slogan-item:nth-child(2) {		/* Последний слоган */
+				margin-left: auto;
+				margin-right: auto;
 			}
+			
 			.slogan-item .btn {
 				margin: 0 auto;
 			}
@@ -1497,12 +1589,22 @@ a:active .icon-basket {
 				padding: 0;
 			}
 			.left-part-form, .right-part-items  {
-				float: none;
+				width: 100%;
 				margin-left: auto;
 				margin-right: auto;
+				float: none;
+			}
+			.right-part-items {
+				text-align: center;
+			}
+			.left-part-form input[type="radio"] + label, .left-part-form input[type="checkbox"] + label   {
+				margin-bottom: 0;
 			}
 			.sorting {
 				margin-top: 50px;
+			}
+			.sorter {
+				margin-bottom: 0;
 			}
 			.sort-list li {
 				padding-right: 10px;
@@ -1510,17 +1612,16 @@ a:active .icon-basket {
 			.sort-list li:not(:first-of-type) {
 				padding-left: 10px;
 			}
-			.sort-up-down {
-				margin-left: 60px;
-			}
 			.layout-item:nth-of-type(2n+1) {
-				margin-right: 10px;
+				margin-right: auto; /*10px;*/	
+			}
+			.layout-item:nth-of-type(2n) {
+				margin-left: auto; /*10px;*/	
 			}
 			.layout-item:not(:last-of-type){
-				margin-bottom: 20px;
-			}
-			.paginator {
-				
+				margin-bottom: 10px;
+				margin-right: auto;
+				margin-left: auto;
 			}
 			.footer-social, .footer-text {
 				float: none;
@@ -1561,7 +1662,9 @@ a:active .icon-basket {
 				top:0%;
 				left:22px;
 				content:'';
-				transform:translate(0%, -100%);
+				-webkit-transform:translate(0%, -100%);
+				    -ms-transform:translate(0%, -100%);
+				        transform:translate(0%, -100%);
 				border-left:7px solid transparent;
 				border-right:7px solid transparent;
 				border-bottom:7px solid #eeeeee;
@@ -1591,6 +1694,7 @@ a:active .icon-basket {
 				text-shadow:0px 1px 0px rgba(0,0,0,0.5);
 				color:#777;
 				font-size:20px;
+				-webkit-transition: color linear 0.15s;
 				transition:color linear 0.15s;
 				
 				border: 1px solid #cccccc;
@@ -1602,30 +1706,34 @@ a:active .icon-basket {
 				color: #fb565a;
 				box-shadow: 2px 2px 2px rgba(251,86,90, 0.5)
 			}
-			.modal-window {
+			.wrapper {
 				max-width: 460px;
-				min-width: 320px;
+				min-width: 270px;
 				
 				box-sizing: border-box;
 			}
 			.login-form .left-part {
 				float: none;
 				margin-right: 0;
+				max-width: 100%;
+			}
+			.login-form  input[type="text"], .login-form input[type="email"] {
+				width: 100%;
 			}
 		}
 		
-		@media screen and (min-width: 320px) and (max-width: 479px) {
-			.modal-window {
-				padding-left: calc((100% - 220px)/2);
-				padding-right: calc((100% - 220px)/2);
+		@media screen /*and (min-width: 320px)*/ and (max-width: 479px) {
+			.wrapper {
+				padding-left: 10px;
+				padding-right: 10px;
 				width: 100%;
 			}
 			.login-form .left-part {
 				float: none;
 				margin-right: 0;
 			}
-			.login-form textarea {
-				
+			.login-form  {
+				width: 100%;
 			}
 			.map-contacts {
 				outline: 2px solid #eeeeee;
@@ -1639,5 +1747,10 @@ a:active .icon-basket {
 			}
 			.catalog .container:nth-child(2) {
 				font-size: 3em;
+			}
+			.layout-item:nth-of-type(2n), .layout-item:nth-of-type(2n+1) {
+				float: none;
+				margin-right: auto;
+				margin-left: auto;
 			}
 		}

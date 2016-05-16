@@ -17,6 +17,7 @@
 				</div>
 				
 				<nav class="main-navigation menu">
+					<a class="toggle-nav hide-show" href="#">&#9776;</a>
 					<ul  class="lists">
 						<li><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
@@ -24,7 +25,7 @@
 						<li><a href="#">Контакты</a></li>
 						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
 					</ul>
-					<a class="toggle-nav hide-show" href="#">&#9776;</a>
+					
 				</nav>	
 			</div> 
 			
@@ -56,26 +57,32 @@
 						</div>
 						
 						<!-- Блок Сетка (радиобаттоны) -->
-						<h2>Сетка:</h2>
-						<input type="radio" name="radiobutton" id="adaptive" checked>
-						<label for="adaptive">Адаптивная</label><br>
-						<input type="radio" name="radiobutton" id="fixed">
-						<label for="fixed">Фиксированная</label><br>
-						<input type="radio" name="radiobutton" id="stretch">
-						<label for="stretch">Резиновая</label><br>
+						<fieldset class="group-inputs">
+							<legend>Сетка:</legend>
+								<input type="radio" name="radiobutton" id="adaptive" checked>
+								<label for="adaptive">Адаптивная</label>
+								<input type="radio" name="radiobutton" id="fixed">
+								<label for="fixed">Фиксированная</label>
+								<input type="radio" name="radiobutton" id="stretch">
+								<label for="stretch">Резиновая</label>
+						</fieldset>
 						
-						<h2>Особенности:</h2>
-						<input type="checkbox" id="check01" name="checkbox" value="" checked>
-						<label for="check01">Слайдер</label><br>
-						<input type="checkbox" id="check02" name="checkbox" value="">
-						<label for="check02">Блок преимуществ</label><br>
-						<input type="checkbox" id="check03" name="checkbox" value="" checked>
-						<label for="check03">Новости</label><br>
-						<input type="checkbox" id="check04" name="checkbox" value="">
-						<label for="check04">Галерея</label><br>
-						<input type="checkbox" id="check05" name="checkbox" value="">
-						<label for="check05">Корзина</label><br>
+						<fieldset class="group-inputs">
+							<legend>Особенности:</legend>
+								<input type="checkbox" id="check01" name="checkbox" value="" checked>
+								<label for="check01">Слайдер</label>
+								<input type="checkbox" id="check02" name="checkbox" value="">
+								<label for="check02">Блок преимуществ</label>
+								<input type="checkbox" id="check03" name="checkbox" value="" checked>
+								<label for="check03">Новости</label>
+								<input type="checkbox" id="check04" name="checkbox" value="">
+								<label for="check04">Галерея</label>
+								<input type="checkbox" id="check05" name="checkbox" value="">
+								<label for="check05">Корзина</label>
+						</fieldset>
+						
 						<button type="submit" class="btn">Показать</button>
+						
 					</form>
 				</div>
 				
@@ -206,7 +213,7 @@
 					<!-- Пагинатор страниц -->
 					<div class="paginator">
 						<ul class="paginator-list">
-							<li class="active btn"><a href="#">1</a></li>
+							<li class="active btn"><a>1</a></li>
 							<li class="btn"><a href="#">2</a></li>
 							<li class="btn"><a href="#">3</a></li>
 							<li class="btn"><a href="#">Следующая</a></li>
@@ -251,31 +258,33 @@
 		
 		<!-- Всплывающее модальное окно Напишите нам-->
 		<div class="modal-window">
-			<!-- Кнопка Закрыть -->
-			<div class="modal-window-close">
-				закрыть
+			<div class="wrapper">
+				<!-- Кнопка Закрыть -->
+				<div class="modal-window-close">
+					закрыть
+				</div>
+				
+				<!-- Форма обратной связи -->
+				<form class="login-form clearfix" action="/echo" method="post">
+					<div class="left-part">
+						<label for="name">Ваше имя:</label>
+						<input type="text" name="login" id="name" placeholder="Представьтесь, пожалуйста" required>
+					</div>
+					
+					<div class="right-part">
+						<label for="email">Ваш е-mail:</label>
+						<input type="email" name="email" id="email" placeholder="Для отправки ответа" required><br>
+					</div>
+					
+					<label for="letter">Текст письма:</label>
+					<textarea name="letter" id="letter" cols="28" rows="4" placeholder="В свободной форме" required=""></textarea>
+					<button type="submit" class="btn">Отправить</button>
+				</form>
 			</div>
-			
-			<!-- Форма обратной связи -->
-			<form class="login-form clearfix" action="/echo" method="post">
-				<div class="left-part">
-					<label for="name">Ваше имя:</label><br>
-					<input type="text" name="login" id="name" placeholder="Представьтесь, пожалуйста" required>
-				</div>
-				
-				<div class="right-part">
-					<label for="email">Ваш е-mail:</label><br>
-					<input type="email" name="email" id="email" placeholder="Для отправки ответа" required><br>
-				</div>
-				
-				<label for="letter">Текст письма:</label><br>
-				<textarea name="letter" id="letter" cols="56" rows="4" placeholder="В свободной форме" required=""></textarea>
-				<button type="submit" class="btn">Отправить</button>
-			</form>
 		</div>
 		
 		<!-- Подключение скриптов -->
 		<script type="text/javascript" charset="utf-8" async src="js/script.min.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8qD5kkL6reLpob9nMyUI7l8KWJrKG2wc&callback=initMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
 	</body>
 </html>
