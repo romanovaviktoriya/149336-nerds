@@ -8,34 +8,34 @@
 	var storage = localStorage.getItem("login");
 	var storage_addres = localStorage.getItem("email");	
 	enter.addEventListener("click", function(event) {	/* Клик по ссылке Вход */
-	event.preventDefault();
-	modal_window.classList.add("modal-show");
-	if (storage) {
-		login.value = storage;
-		email.focus();
-		if (storage_addres) {
-			email.value = storage;
-			letter.focus();
-		} else {
+		event.preventDefault();
+		modal_window.classList.add("modal-show");
+		if (storage) {
+			login.value = storage;
 			email.focus();
+			if (storage_addres) {
+				email.value = storage;
+				letter.focus();
+			} else {
+				email.focus();
+			}
+		} else {
+			login.focus();
 		}
-	} else {
-		login.focus();
-	}
 	});
 	close_window.addEventListener("click", function(event) {	/* Клик по закрывающему крестику */
-	event.preventDefault();
-	modal_window.classList.remove("modal-show");
+		event.preventDefault();
+		modal_window.classList.remove("modal-show");
 	});
 
 	form.addEventListener("submit", function(event) {			/* Авторизация */
-	if (!(login.value && email.value)) {
-		event.preventDefault();
-		modal_window.classList.remove("modal-error");
-		modal_window.classList.add("modal-error");
-	} else {
-		localStorage.setItem("login", login.value);
-	}
+		if (!(login.value && email.value)) {
+			event.preventDefault();
+			modal_window.classList.remove("modal-error");
+			modal_window.classList.add("modal-error");
+		} else {
+			localStorage.setItem("login", login.value);
+		}
 	});
 	function initMap() {
 	var map = new google.maps.Map(document.getElementById("map"), {
