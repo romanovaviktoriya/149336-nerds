@@ -19,9 +19,9 @@
 					<ul  class="lists">
 						<li><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
-						<li class="current-item active"><a href="store.html">Магазин</a></li>
+						<li class="current-item active"><a class="pseudo" href="store.html">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
-						<li><a href="#"><i class="icon-basket"></i>Корзина</a></li>
+						<li><a href="#" class="basket"><i class="icon-basket"></i>Корзина</a></li>
 					</ul>
 				</nav>	
 			</div> 
@@ -45,8 +45,10 @@
 								<div class="toggle max-toggle"></div>
 							</div>
 							<div class="price-controls">
-								от <input class="min-price" type="text" value="0">
-								до <input class="max-price" type="text" value="15 000">
+								<label for="min">от </label>
+								<input class="min-price" type="text" id="min" value="0">
+								<label for="max">до </label>
+								<input class="max-price" type="text" id="max" value="15 000">
 							</div>
 						</div>
 						<!-- Блок Сетка (радиобаттоны) -->
@@ -88,7 +90,7 @@
 							</ul>
 						</div>	
 						<div class="sort-up-down">
-							<a class="active" href="#"><i class="icon-down-dir"></i></a>
+							<a class="active" href="#"><i class="icon-down-dir a-active"></i></a>
 							<a href="#"><i class="icon-up-dir"></i></a>
 						</div>
 					</div>
@@ -188,7 +190,7 @@
 					<!-- Пагинатор страниц -->
 					<div class="paginator">
 						<ul class="paginator-list">
-							<li class="active btn"><a>1</a></li>
+							<li class="active btn"><a class="li-active">1</a></li>
 							<li class="btn"><a href="#">2</a></li>
 							<li class="btn"><a href="#">3</a></li>
 							<li class="btn last-li"><a href="#">Следующая</a></li>

@@ -1,4 +1,4 @@
-﻿/* Подключение иконочного шрифта --------------------------------- */
+/* Подключение иконочного шрифта --------------------------------- */
 @charset 'UTF-8';
 @font-face
 {
@@ -33,6 +33,7 @@
     margin-left: .2em;
 
     text-align: center;
+    vertical-align: baseline;
     text-decoration: inherit;
     text-transform: none;
 
@@ -100,8 +101,8 @@ body
     font-weight: 500;
     font-style: normal;
 
-    color: #000000;
-    background: #ffffff;
+    color: #000;
+    background: #fff;
 }
 .container
 {
@@ -135,7 +136,7 @@ body
     text-decoration: none;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: #fff;
     border-radius: 3px;
     background: #fb565a;
 }
@@ -160,7 +161,7 @@ body
 
     float: right;
 
-    max-width: calc(100% - 149px); /*64%; /*520px;		/* ... 580рх, но тогда остается лишнее место после Корзины... */
+    max-width: calc(100% - 149px);
     margin-top: 52px;
 }
 .logo
@@ -171,6 +172,10 @@ body
     width: 139px;
     margin-top: 26px;
     margin-bottom: 41px;
+}
+.logo img
+{
+    max-width: 100%;
 }
 .main-navigation ul
 {
@@ -205,14 +210,14 @@ body
     text-decoration: none;
     text-transform: uppercase;
 
-    color: #000000;
+    color: #000;
 }
 .main-navigation .hide-show
 {
     /* Гамбургер спрятан */
     display: none;
 }
-.main-navigation .toggle-nav:hover + .lists,
+.toggle-nav:hover + .lists,
 .main-navigation > .lists:hover
 {
     display: block;
@@ -221,12 +226,12 @@ body
 {
     display: block;
 }
-.main-navigation li:last-child a
+.main-navigation  .basket
 {
     /* Последний элемент меню Хедера (корзина) */
     padding: 3px 0 3px 30px;
 }
-li.active:last-child a::after
+li.active .basket::after
 {
     right: 0;
     /* Подчеркивание (псевдоэлемент) Корзины, если она открыта (class="active") */
@@ -247,29 +252,29 @@ li.active:last-child a::after
 {
     /* Ссылки при нажатии */
     opacity: .4;				/*color: #bdbdbd;*/
-    color: #000000;
+    color: #000;
 }
-.main-navigation .active a
+.main-navigation .pseudo
 {
     /* Активная ссылка меню хедера */
     position: relative;
 
     pointer-events: none;	/* Отменяем события по клику */
 }
-.main-navigation .active a:hover
+.active a:hover
 {
     cursor: default;
 
-    color: #000000;
+    color: #000;
     /* Активная ссылка меню хедера при наведении */
     background: none;
 }
-.main-navigation .active a::after
+.main-navigation .pseudo::after
 {
     position: absolute;
-    right: 20px;
+    right: 23px;
     bottom: 0;
-    left: 20px;
+    left: 23px;
 
     height: 2px;
     /* Псевдоэлемент активной ссылки меню хедера */
@@ -336,9 +341,9 @@ a:active .icon-basket
     cursor: pointer;
     vertical-align: top;
 
-    border: 3px solid #ffffff;
+    border: 3px solid #fff;
     border-radius: 50%;
-    background: #ffffff;
+    background: #fff;
 }
 #btn-1:checked ~ .slider-controls label[for='btn-1'],
 #btn-2:checked ~ .slider-controls label[for='btn-2'],
@@ -375,7 +380,7 @@ a:active .icon-basket
     margin-top: 0;
     margin-bottom: 17px;
 
-    color: #000000;
+    color: #000;
 }
 .slide-text p
 {
@@ -392,6 +397,15 @@ a:active .icon-basket
     width: 240px;
     margin-top: 27px;
     padding: 10px 0;
+}
+.slide .btn:hover
+{
+    background-color: #d6494d;
+}
+.slide .btn:active
+{
+    background-color: #b63538;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
 .slide:nth-child(1)
 {
@@ -441,7 +455,7 @@ a:active .icon-basket
     width: 100%;
     padding-bottom: 80px;
 
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid #eee;
 }
 .slogan-item
 {
@@ -458,6 +472,7 @@ a:active .icon-basket
 }
 .slogan-item img
 {
+    max-width: 100%;
     /* Изображения слоганов */
     margin-bottom: 21px;
 }
@@ -472,7 +487,7 @@ a:active .icon-basket
 
     text-transform: uppercase;
 
-    color: #000000;
+    color: #000;
 }
 .slogan-item p
 {
@@ -483,6 +498,10 @@ a:active .icon-basket
     margin: 14px 0;
 
     color: #283136;
+}
+.slogan-item:nth-child(2) p
+{
+    padding-right: 20px;
 }
 .slogan-item .btn
 {
@@ -514,6 +533,11 @@ a:active .icon-basket
 {
     /* Кнопка 3-го слогана при наведении */
     background: #d6ae2c;
+}
+.slogan-item .btn:active
+{
+    /* Кнопки слогана при нажатии */
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
 .slogan-item:nth-child(1) .btn:active
 {
@@ -556,7 +580,7 @@ a:active .icon-basket
     font-weight: 500;
     line-height: 1em;	/* 36px */
 
-    color: #000000;
+    color: #000;
 }
 .content-column-left p
 {
@@ -630,6 +654,10 @@ a:active .icon-basket
 
     text-align: center;
 }
+.picture-logo img
+{
+    max-width: 100%;
+}
 .caption-logo
 {
     font-size: 1.6em;	/* 16px */
@@ -659,8 +687,8 @@ a:active .icon-basket
     text-align: center;
     text-transform: uppercase;
 
-    color: #000000;
-    background-color: #ffffff;
+    color: #000;
+    background-color: #fff;
 }
 .caption-logo::after
 {
@@ -673,7 +701,7 @@ a:active .icon-basket
 
     content: '';
 
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid #eee;
 }
 /* Логотипы ------------------------------------------------------ */
 .partners
@@ -684,8 +712,8 @@ a:active .icon-basket
     width: 100%;
     height: 166px;
 
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
 }
 .partner-item
 {
@@ -694,7 +722,7 @@ a:active .icon-basket
 
     width: 240px;
     margin-top: 43px;
-    margin-right: 76px;		/* 80px - 4px (инлайн-блок) */
+    /*margin-right: 76px;		/* 80px - 4px (инлайн-блок) */
 
     text-align: center;
     vertical-align: middle;
@@ -704,19 +732,26 @@ a:active .icon-basket
     /* Последний логотип партнера */
     margin-right: 0;
 }
-.partners .partner-item img
+.partner-item:nth-of-type(2)
 {
+    margin-right: calc((100% - 720px)/2);
+    margin-left: calc((100% - 720px)/2);
+}
+.partner-item img
+{
+    max-width: 100%;
+
     vertical-align: middle;
     /* Изображение логотипа */
 
     opacity: .2;
 }
-.partners .partner-item img:hover
+.partner-item img:hover
 {
     /* Изображение логотипа при наведении */
     opacity: 1;
 }
-.partners .partner-item img:active
+.partner-item img:active
 {
     /* Изображение логотипа при нажатии */
     opacity: 1;
@@ -750,7 +785,7 @@ a:active .icon-basket
     vertical-align: middle;
     text-transform: uppercase;
 
-    color: #000000;
+    color: #000;
 }
 /* Форма выбора макетов ------------------------------------------ */
 .left-part-form
@@ -849,7 +884,7 @@ a:active .icon-basket
     text-decoration: none;
 
     opacity: .3;
-    color: #000000;
+    color: #000;
     border-bottom: 1px dotted #00ca74;
 }
 .sort-list span:hover
@@ -861,7 +896,7 @@ a:active .icon-basket
 {
     opacity: 1;
     /* Ссылки при нажатии внутри списка сортировки */
-    border-bottom-style: none;
+    border-bottom: 1px dotted #fff;
 }
 .sort-list .sort-title
 {
@@ -893,13 +928,13 @@ a:active .icon-basket
 .icon-down-dir:active,
 .icon-up-dir:active
 {
-    color: #000000;
+    color: #000;
 }
 .sort-up-down a
 {
     text-decoration: none;
 }
-.sort-up-down .active i
+.sort-up-down .a-active
 {
     cursor: default;
     pointer-events: none;	/* Отменяем события по клику */
@@ -920,6 +955,10 @@ a:active .icon-basket
     border-top: 30px solid rgba(0,0,0,.1);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+}
+.layout-item img
+{
+    max-width: 100%;
 }
 .layout-item:hover
 {
@@ -945,9 +984,9 @@ a:active .icon-basket
 
     vertical-align: top;
 
-    border: 3px solid #ffffff;
+    border: 3px solid #fff;
     border-radius: 50%;
-    background: #ffffff;
+    background: #fff;
 }
 .layout-buy
 {
@@ -965,7 +1004,7 @@ a:active .icon-basket
 
     text-align: center;
 
-    background: #ffffff;
+    background: #fff;
 }
 .layout-item:hover .layout-buy
 {
@@ -976,7 +1015,7 @@ a:active .icon-basket
     /* Ссылка на названии макетов */
     text-decoration: none;
 
-    color: #000000;
+    color: #000;
 }
 .layout-buy-title
 {
@@ -997,6 +1036,15 @@ a:active .icon-basket
 {
     font-size: 18px;	/*  */
     line-height: 14px;	/*  */
+}
+.layout-buy a.btn:hover
+{
+    background-color: #d6494d;
+}
+.layout-buy a.btn:active
+{
+    background-color: #b63538;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
 .layout-item:nth-of-type(2n+1)
 {
@@ -1025,7 +1073,7 @@ a:active .icon-basket
     /* Радиокнопки */
     display: none;
 }
-.left-part-form input[type='radio'] + label
+input[type='radio'] + label
 {
     font-size: .89em;	/* 16px */
     line-height: 1.25em;		/* 20px */
@@ -1040,7 +1088,7 @@ a:active .icon-basket
 
     color: #283136;
 }
-.left-part-form input[type='radio'] + label::before
+input[type='radio'] + label::before
 {
     font-family: 'symbols-nerds';
     font-size: 1.75em;	/* 28px */
@@ -1054,7 +1102,7 @@ a:active .icon-basket
 
     color: #c1c1c1;
 }
-.left-part-form input[type='radio']:checked + label::before
+input[type='radio']:checked + label::before
 {
     content: '\25cf';
 }
@@ -1062,7 +1110,7 @@ a:active .icon-basket
 {
     display: none;
 }
-.left-part-form input[type='checkbox'] + label
+input[type='checkbox'] + label
 {
     font-size: .89em;	/* 16px */
     line-height: 1.25em;	/* 20px */
@@ -1077,7 +1125,7 @@ a:active .icon-basket
 
     color: #283136;
 }
-.left-part-form input[type='checkbox'] + label::before
+input[type='checkbox'] + label::before
 {
     font-family: 'symbols-nerds';
     font-size: 1.75em;	/* 28px */
@@ -1091,7 +1139,7 @@ a:active .icon-basket
 
     color: #c1c1c1;
 }
-.left-part-form input[type='checkbox']:checked + label::before
+input[type='checkbox']:checked + label::before
 {
     margin-right: 8px;
 
@@ -1108,7 +1156,7 @@ a:active .icon-basket
     margin-top: 38px;
     padding: 10px 0;
 
-    color: #000000;
+    color: #000;
     border: none;
     outline: none;
     background-color: #f1f1f1;
@@ -1125,37 +1173,37 @@ a:active .icon-basket
     box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
 /* События элементов формы при НАВЕДЕНИИ */
-.left-part-form input[type='radio'] + label:hover,
+input[type='radio'] + label:hover,
 /* при наведении на лейблы */
-.left-part-form input[type='radio']:checked + label:hover,
-.left-part-form input[type='checkbox'] + label:hover,
-.left-part-form input[type='checkbox']:checked + label:hover
+input[type='radio']:checked + label:hover,
+input[type='checkbox'] + label:hover,
+input[type='checkbox']:checked + label:hover
 {
-    color: #000000;
+    color: #000;
 }
-.left-part-form input[type='radio'] + label:hover::before,
+input[type='radio'] + label:hover::before,
 /* при наведении на "псевдо" радиобаттоны и чекбоксы */
-.left-part-form input[type='radio']:checked + label:hover::before,
-.left-part-form input[type='checkbox'] + label:hover::before,
-.left-part-form input[type='checkbox']:checked + label:hover::before
+input[type='radio']:checked + label:hover::before,
+input[type='checkbox'] + label:hover::before,
+input[type='checkbox']:checked + label:hover::before
 {
     color: #b5b5b5;
 }
 /* События элементов формы при БЛОКИРОВКЕ */
-.left-part-form input[type='radio']:disabled + label,
+input[type='radio']:disabled + label,
 /* лейблы при блокировке input[] */
-.left-part-form input[type='radio']:checked:disabled + label,
-.left-part-form input[type='checkbox']:disabled + label,
-.left-part-form input[type='checkbox']:checked:disabled + label
+input[type='radio']:checked:disabled + label,
+input[type='checkbox']:disabled + label,
+input[type='checkbox']:checked:disabled + label
 {
     opacity: .4;
     color: #283136;
 }
-.left-part-form input[type='radio']:disabled + label::before,
+input[type='radio']:disabled + label::before,
 /* "псевдо-" радиобаттоны и чекбоксы при блокировке */
-.left-part-form input[type='radio']:checked:disabled + label::before,
-.left-part-form input[type='checkbox']:disabled + label::before,
-.left-part-form input[type='checkbox']:checked:disabled + label::before
+input[type='radio']:checked:disabled + label::before,
+input[type='checkbox']:disabled + label::before,
+input[type='checkbox']:checked:disabled + label::before
 {
     opacity: .3;
     color: #b5b5b5;
@@ -1203,7 +1251,7 @@ a:active .icon-basket
 
     cursor: pointer;
 
-    border: 8px solid #ffffff;
+    border: 8px solid #fff;
     border-radius: 50%;
     background: #ababab;
     box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -1256,6 +1304,8 @@ a:active .icon-basket
     padding: 0;
 
     list-style: none;
+
+    vertical-align: middle;
 }
 .paginator-list li
 {
@@ -1288,7 +1338,8 @@ a:active .icon-basket
 
     text-decoration: none;
 
-    color: #000000;
+    color: #000;
+    border-radius: 3px;
 }
 .paginator-list  .last-li
 {
@@ -1305,7 +1356,7 @@ a:active .icon-basket
     cursor: default;
     pointer-events: none;	/* Отменяем события по клику */
 
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: inset 0 0 0 2px #f1f1f1;
 }
 .paginator-list :not(.active)
@@ -1317,15 +1368,15 @@ a:active .icon-basket
     /* События при НАВЕДЕНИИ у всех НЕ активных ссылок Пагинатора */
     background-color: #e5e5e5;
 }
-.paginator-list .active a
+.paginator-list .li-active
 {
     background: none;
 }
-.paginator-list :hover a
+li:hover .li-active
 {
     background: none;
 }
-.paginator-list :active a
+li:active .li-active
 {
     background: none;
 }
@@ -1368,7 +1419,7 @@ a:active .icon-basket
     margin-left: -50%;	/*-440px;*/
     padding: 26px 20px;
 
-    background-color: #ffffff;
+    background-color: #fff;
 }
 .map-contacts .head
 {
@@ -1380,45 +1431,45 @@ a:active .icon-basket
 
     margin: 12px 0;
 
-    color: #666666;
+    color: #666;
 }
 .map-contacts .btn
 {
     font-size: .75em;	/* 12px */
-    line-height: 1.2em;
+    line-height: 1.5em;	/* 18px */
     /* Кнопка в контактах на Карте */
 
     display: block;
 
     width: 204px;
     margin-top: 28px;
-    padding: 12px 0;
+    padding: 10px 0;
 
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: #fff;
     border-radius: 3px;
     background: #fb565a;
 }
 .map-contacts .btn:hover
 {
-    /* Кнопка в контактах на Карте при наведении */
     background-color: #d6494d;
 }
 .map-contacts .btn:active
 {
-    /* Кнопка в контактах на Карте при нажатии */
     background-color: #b63538;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
-
 .marker img
 {
     position: absolute;
     top: 113px;
     right: 207px;
+
+    max-width: 100%;
 }
 /* Футер --------------------------------------------------------- */
 .main-footer
@@ -1427,7 +1478,7 @@ a:active .icon-basket
     padding-top: 85px;
     padding-bottom: 77px;
 
-    background: #ffffff;
+    background: #fff;
 }
 .main-footer a
 {
@@ -1491,6 +1542,7 @@ a:active .icon-basket
     margin-right: 23px;
 
     text-align: center;
+    vertical-align: middle;
     text-decoration: none;
 
     border-radius: 50%;
@@ -1506,7 +1558,7 @@ a:active .icon-basket
 .icon-instagramm
 {
     /* Иконкам задаем белый цвет в любых состояниях */
-    color: #ffffff;
+    color: #fff;
 }
 .social-btn:hover
 {
@@ -1517,6 +1569,7 @@ a:active .icon-basket
 {
     /* Фон социальных кнопок при нажатии */
     background-color: #d6494d;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
 /* Модальное окно Вход ------------------------------------------ */
 .modal-window
@@ -1539,8 +1592,8 @@ a:active .icon-basket
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 
-    color: #000000;
-    background-color: #ffffff;
+    color: #000;
+    background-color: #fff;
     box-shadow: 0 20px 40px rgba(0,0,0,.75);
 }
 .modal-window-close
@@ -1736,7 +1789,9 @@ a:active .icon-basket
 
     min-width: 220px;
 
-    color: #000000;
+    vertical-align: middle;
+
+    color: #000;
 }
 .login-form input[type='text'],
 .login-form input[type='email']
@@ -1753,27 +1808,27 @@ a:active .icon-basket
 
     text-transform: uppercase;
 
-    color: #000000;
+    color: #000;
     border: 2px solid #d7dcde;
     border-radius: 2px;
     outline: none;
-    background: #ffffff;
+    background: #fff;
 }
 .login-form ::-webkit-input-placeholder
 {
-    color: #000000;
+    color: #000;
 }
 .login-form :-moz-placeholder
 {
-    color: #000000;
+    color: #000;
 }
 .login-form ::-moz-placeholder
 {
-    color: #000000;
+    color: #000;
 }
 .login-form :-ms-input-placeholder
 {
-    color: #000000;
+    color: #000;
 }
 .login-form input[type='text']:hover,
 .login-form input[type='email']:hover,
@@ -1802,11 +1857,11 @@ a:active .icon-basket
     resize: none;
     text-transform: uppercase;
 
-    color: #000000;
+    color: #000;
     border: 2px solid #d7dcde;
     border-radius: 2px;
     outline: none;
-    background: #ffffff;
+    background: #fff;
 }
 .login-form .btn
 {
@@ -1832,6 +1887,7 @@ a:active .icon-basket
 .login-form .btn:active
 {
     background-color: #b63538;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.15);
 }
 /* Для отображения на устройствах меньше 900px*/
 @media screen and (min-width: 768px) and /*(max-width: 959px)*/
@@ -1931,7 +1987,7 @@ a:active .icon-basket
         padding-right: 10px;
         padding-left: 10px;
     }
-    .main-navigation .active a::after
+    .active .pseudo::after
     {
         right: 10px;
         left: 10px;
@@ -1997,6 +2053,10 @@ a:active .icon-basket
         /* Последний слоган */
         margin-left: auto;
     }
+    .slogan-item:nth-child(2) p
+    {
+        padding-right: 0;
+    }
     .slogan-item .btn
     {
         margin: 0 auto;
@@ -2016,7 +2076,8 @@ a:active .icon-basket
     {
         margin-top: 0;
     }
-    .partner-item
+    .partner-item,
+    .partner-item:nth-of-type(2)
     {
         display: block;
 
@@ -2049,8 +2110,8 @@ a:active .icon-basket
     {
         text-align: center;
     }
-    .left-part-form input[type='radio'] + label,
-    .left-part-form input[type='checkbox'] + label
+    input[type='radio'] + label,
+    input[type='checkbox'] + label
     {
         margin-bottom: 0;
     }
@@ -2110,6 +2171,8 @@ a:active .icon-basket
         position: relative;
 
         display: inline-block;
+
+        vertical-align: middle;
     }
     .menu ul
     {
@@ -2122,7 +2185,7 @@ a:active .icon-basket
         padding: 10px 18px;
 
         border-radius: 3px;
-        background: #eeeeee;
+        background: #eee;
         box-shadow: 0 1px 1px rgba(0,0,0,.15);
     }
     .menu ul::after
@@ -2140,7 +2203,7 @@ a:active .icon-basket
                 transform: translate(0, -100%);
 
         border-right: 7px solid transparent;
-        border-bottom: 7px solid #eeeeee;
+        border-bottom: 7px solid #eee;
         border-left: 7px solid transparent;
     }
     .menu li
@@ -2156,7 +2219,7 @@ a:active .icon-basket
 
         text-decoration: none;
     }
-    .main-navigation a.toggle-nav
+    .main-navigation .toggle-nav
     {
         display: block;
     }
@@ -2171,11 +2234,12 @@ a:active .icon-basket
 
         -webkit-transition: color linear .15s;
                 transition: color linear .15s;
+        vertical-align: middle;
 
-        color: #777777;
-        border: 1px solid #cccccc;
+        color: #777;
+        border: 1px solid #ccc;
         border-radius: 3px;
-        background: #eeeeee;
+        background: #eee;
         box-shadow: 0 1px 1px rgba(0,0,0,.15);
         text-shadow: 0 1px 0 rgba(0,0,0,.5);
     }
@@ -2233,7 +2297,7 @@ a:active .icon-basket
 
         margin: 0 auto;
 
-        outline: 2px solid #eeeeee;
+        outline: 2px solid #eee;
     }
     .main-footer
     {
